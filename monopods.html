@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Магазин гаджетов DEVICE</title>
+</head>
+<body>
+	<header class="main-header">
+		<nav class="main-nav">
+			<div class="logo"><a href=""><img src="#" alt="Логотип компании Device"></a></div>
+			<input type="search" name="header-search" placeholder="Поиск по сайту" class="main-nav__search">
+		<section class="catalog-navigation">
+			<h2 class="visually-hidden">Каталог товаров</h2>
+		  	<button class="main-nav__catalog-btn">Каталог товаров</button>
+		  		<ul>
+				  	<li><a href="">Виртуальная реальность</a></li>
+				  	<li class="catalog-navigation-current"><a href="monopods.html">Моноподы для селфи</a></li>
+				  	<li><a href="">Экшн-камеры</a></li>
+				  	<li><a href="">Фитнес-браслеты</a></li>
+				  	<li><a href="">Умные часы</a></li>
+				  	<li><a href="">Квадрокоптеры</a></li>
+		 		 </ul>
+		</section>
+		<!-- Блок пользовательской навигации, в зависимости от статуса пользователя будет изменяться??? -->
+		<section class="user-navigation">
+			<h2 class="visually-hidden">Пользовательсий интерфейс</h2>
+			<button>Войти</button>
+			<button>Сравнить</button>
+			<a href="">Корзина</a>
+		</section>
+		<!-- Блок для ссылок-якорей в информационные блоки -->
+			<ul class="main-nav__opportunities">
+				<li><a href="">Доставка</a></li>
+				<li><a href="">Гарантия</a></li>
+				<li><a href="#information">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1 class="page-title">Моноподы для селфи</h1>
+		<ul class="breadcrumbs">
+	        <li><a href="index.html">Главная</a></li>
+	        <li><a href="catalog.html">Каталог тваров</a></li>
+	        <li class="breadcrumbs-current">Моноподы для селфи</li>
+      	</ul>
+
+      	<section class="filters">
+        	<h2>Фильтр:</h2>
+        <!-- Здесь будет форма -->
+      	</section>
+
+      	<section class="catalog">
+	        <h2 class="visually-hidden">Список моноподов для селфи</h2>
+			<div class="sorting">
+        		<h2>Сортировка:</h2>
+	        	<button id="prices">По цене</button>
+	        	<button id="types">По типу</button>
+	        	<button id="newest">По новизне</button>
+	        	<button id="to-top">По возрастанию</button>
+	        	<button id="to-bottom">По убыванию</button>
+      		</div>
+			<ul class="catalog-list">
+	          <li class="catalog-item">
+	            <h3 class="visually-hidden">Любительская селфи-палка</h3>
+	            <p class="catalog-item-image">
+	              <a href="catalog-item.html">
+	                <img src="#" width="360" height="380" alt="Любительская селфи-палка">
+	              </a>
+	            </p>
+	            <p class="catalog-item-price">
+	               <a href="catalog-item-amateur-monopod.html">Любительская селфи-палка</a>
+	               <b>500 руб.</b>
+	            </p>
+	          </li>
+	          <li class="catalog-item">
+	            <h3 class="visually-hidden">Профессиональная селфи-палка</h3>
+	            <p class="catalog-item-image">
+	              <a href="catalog-item-professional-monopod.html">
+	                <img src="#" width="360" height="380" alt="Профессиональная селфи-палка">
+	              </a>
+	            </p>
+	            <p class="catalog-item-price">
+	               <a href="catalog-item.html">Профессиональная селфи-палка</a>
+	               <b>1 500 руб.</b>
+	            </p>
+	          </li>
+	          <li class="catalog-item">
+	            <h3 class="visually-hidden-waterproof-monopod">Непотопляемая селфи-палка</h3>
+	            <p class="catalog-item-image">
+	              <a href="catalog-item.html">
+	                <img src="#" width="360" height="380" alt="Непотопляемая селфи-палка">
+	              </a>
+	            </p>
+	            <p class="catalog-item-price">
+	               <a href="catalog-item.html">Непотопляемая селфи-палка</a>
+	               <b>2 500 руб.</b>
+	            </p>
+	          </li>
+	          <li class="catalog-item">
+	            <h3 class="visually-hidden">Селфи-палка «Следуй за мной»</h3>
+	            <p class="catalog-item-image">
+	              <a href="catalog-item.html">
+	                <img src="#" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+	              </a>
+	            </p>
+	            <p class="catalog-item-price">
+	               <a href="catalog-item.html">Селфи-палка «Следуй за мной»</a>
+	               <b>4 900 руб.</b>
+	            </p>
+	          </li>
+        	</ul>
+
+        	<ul class="pagination-list">
+				<li class="pagination-nav"><a>Назад</a></li>
+          		<li class="pagination-item pagination-item-current"><a>1</a></li>
+		        <li class="pagination-item"><a href="#">2</a></li>
+		        <li class="pagination-item"><a href="#">3</a></li>
+		        <li class="pagination-nav"><a href="#">Вперед</a></li> 
+        	</ul>
+      </section>
+   </main>
+     	<footer class="main-footer">
+		<div class="logo"><img src="#" alt="Логотип компании Device"></div>
+		<address>г.Москва, ул. Строителей 15</address>
+
+		<a href="tel:+7(495)4959595">Тел: +7(495)495-95-95</a>
+		<section class="opportunities">
+			<h2 class="visually-hidden">Дополнителные опции</h2>
+			<ul>
+				<li><a href="#information">Доставка</a></li>
+				<li><a href="">Гарантия</a></li>
+				<li><a href="#information">Контакты</a></li>
+			</ul>
+		</section>
+		<p class="social">
+			<a href="">Facebook</a>
+			<a href="">Instagram</a>
+			<a href="">Twitter</a>
+		</p>
+		<p class="footer-copyright">
+        	<a class="button" href="https://htmlacademy.ru"><img src="#" alt="HTML Academy"></a>
+     	</p>
+	</footer>
+</body>
+</html>

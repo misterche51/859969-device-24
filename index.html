@@ -1,12 +1,151 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+<head>
+	<meta charset="utf-8">
+	<title>Магазин гаджетов DEVICE</title>
+</head>
+<body>
+	<header class="main-header">
+		<nav class="main-nav">
+			<!-- Логотип как ссылка -->
+			<div class="logo"><a href=""><img src="#" alt="Логотип компании Device"></a></div>
+			<!-- Форма поиска по сайту -->
+			<input type="search" name="header-search" placeholder="Поиск по сайту" class="main-nav__search">
+			<!-- Каталог товаров в формате выпадающиго при наведении меню-->
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+			<!-- Я не стал его объединять в список ссылок с Доставкой, Гарантией и Контактками,
+			 так как , по моему мнению, они выполняют разные функции, перечисленные разделы
+			 ведут на разделы главной страницы, а раздел с каталогом является отдельной страницей и важным разделом -->
+		<section class="catalog-navigation">
+			<h2 class="visually-hidden">Каталог товаров</h2>
+		  	<button class="main-nav__catalog-btn">Каталог товаров</button>
+		  <!-- список должен выпадать при наведении и клике -->
+		  		<ul>
+				  	<li><a href="">Виртуальная реальность</a></li>
+				  	<li><a href="">Моноподы для селфи</a></li>
+				  	<li><a href="">Экшн-камеры</a></li>
+				  	<li><a href="">Фитнес-браслеты</a></li>
+				  	<li><a href="">Умные часы</a></li>
+				  	<li><a href="">Квадрокоптеры</a></li>
+		 		 </ul>
+		</section>
+		<!-- Блок пользовательской навигации, в зависимости от статуса пользователя будет изменяться??? -->
+		<section class="user-navigation">
+			<h2 class="visually-hidden">Пользовательсий интерфейс</h2>
+			<button>Войти</button>
+			<button>Сравнить</button>
+			<a href="">Корзина</a>
+		</section>
+		<!-- Блок для ссылок-якорей в информационные блоки -->
+			<ul class="main-nav__opportunities">
+				<li><a href="">Доставка</a></li>
+				<li><a href="">Гарантия</a></li>
+				<li><a href="#information">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!-- Предполагаю, что слайдер c популярными товарами должен располагаться здесь -->
+		<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
+		<!-- Изначально думал верстать как section, но из функциональной задачи блока вытекает верстка кк nav -->
+		<nav class="catalog">
+			<!-- У меня дважды на странице появляются одинаковые заголовки h2-Каталог товаров, это нормально? -->
+			<h2 class="visually-hidden">Каталог товаров</h2>
+			<ul> 
+				<!-- Иконки через background-image? -->
+				<li><a href="">Виртуальная реальность</a></li>
+				<li><a href="monopods.html">Моноподы для селфи</a></li>
+				<li><a href="">Экшн-камеры</a></li>
+				<li><a href="">Фитнес-браслеты</a></li>
+				<li><a href="">Умные часы</a></li>
+				<li><a href="">Квадрокоптеры</a></li>
+			</ul>
+		</nav>
+		<!-- Блоку для слайдера совсем не понимаю как верстать и наполнять контентом,
+		 поэтому сверстал кнопками, при нажатии на которые будет меняться контент из списка в правой части -->
+		<section class="features">
+			<h2 class="visually-hidden">Дополнительные опции</h2>
+			<ul class="features__slider">
+				<li><button class="features__slider features__delivery">Доставка</button></li>
+				<li><button class="features__warranty">Гарантия</button></li>
+				<li><button class="features__credits">Кредит</button></li>
+			</ul>
+			<ul class="features__description">
+				<li>
+					<h3>Доставка</h3> 
+					<p>Мы с удовольствием достави ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+				</li>
+				<li>
+					<h3>Гарантия</h3> 
+					<p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>
+					Товар, не дом, конечно же.</p>	
+				</li>
+				<li>
+					<h3>Кредит</h3> 
+					<p>Залезть в долговую яму стало проще! Крединые консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>		
+				</li>
+			</ul>
+		</section>
 
-  </body>
+		<section class="clients">
+			<h2 class="visually-hidden">Наши клиенты</h2>
+			<ul>
+				<!-- Логотипы через background-image?  -->
+				<li><a href="" title="DJI">DJI</a></li>
+				<li><a href="" title="SP Gadgets">SP Gadgets</a></li>
+				<li><a href="" title="GoPro">GoPro</a></li>
+				<li><a href="" title="Vive">Vive</a></li>
+			</ul>
+		</section>
+		
+		<section class="info" id="information">
+
+			<h2 class="visually-hidden">Информация о компании DEVICE</h2>
+			<section class="about">
+				<h3>О нас</h3>
+				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+
+				<ul>
+					<li><a href="https://www.dellin.ru/">Деловые линии</a></li>
+					<li><a href="ae5000.ru/">Автотрединг</a></li>
+					<li><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
+				</ul>
+				<button type="button">Подробнее о нас</button>
+			</section>
+
+			<section class="contacts">
+				<h3>Контакты</h3>
+				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работспособность покуки. Всякое бывает.</p>
+				<button type="button"><img src="img/device-map.jpg" alt="Как добраться до DEVICE"></button>
+				<button type="button">Напишите нам</button>
+			</section>
+		</section>
+	</main>
+
+	<footer class="main-footer">
+		<div class="logo"><img src="#" alt="Логотип компании Device"></div>
+		<address>г.Москва, ул. Строителей 15</address>
+
+		<a href="tel:+7(495)4959595">Тел: +7(495)495-95-95</a>
+		<section class="opportunities">
+			<h2 class="visually-hidden">Дополнителные опции</h2>
+			<ul>
+				<li><a href="#information">Доставка</a></li>
+				<li><a href="">Гарантия</a></li>
+				<li><a href="#information">Контакты</a></li>
+			</ul>
+		</section>
+		<p class="social">
+			<a href="">Facebook</a>
+			<a href="">Instagram</a>
+			<a href="">Twitter</a>
+		</p>
+		<p class="footer-copyright">
+        	<a class="button" href="https://htmlacademy.ru"><img src="#" alt="HTML Academy"></a>
+     	</p>
+	</footer>
+
+
+</body>
 </html>
