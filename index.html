@@ -6,7 +6,7 @@
 </head>
 <body>
 	<header class="header">
-		<div class="logo header-logo"><a href=""><img src="#" alt="Логотип компании Device"></a></div>
+		<div class="logo header-logo"><a href=""><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 
 		<div class="header-top">
 			<form class="header-searcher"><input type="text" name="header-searcher"></form>
@@ -37,17 +37,18 @@
 	</header>
 
 	<main>
-		<!-- Предполагаю, что слайдер c популярными товарами должен располагаться здесь -->
+		
 		<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
-		<nav class="main-catalog">
+		<!-- задаю новое пространство имен assortment для каталога на главной -->
+		<nav class="assortment">
 			<h2 class="visually-hidden">Каталог товаров</h2>
-			<ul class="catalog-list"> 
-				<li class="catalog-list__item catalog-list__item--vr"><a href="#">Виртуальная реальность</a></li>
-				<li class="catalog-list__item catalog-list__item--monopods"><a href="#">Моноподы для селфи</a></li>
-				<li class="catalog-list__item catalog-list__item--actioncams"><a href="#">Экшн-камеры</a></li>
-				<li class="catalog-list__item catalog-list__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
-				<li class="catalog-list__item catalog-list__item--clocks"><a href="#">Умные часы</a></li>
-				<li class="catalog-list__item catalog-list__item--copters"><a href="#">Квадрокоптеры</a></li>
+			<ul class="assortment__list"> 
+				<li class="assortment__item assortment__item--vr"><a href="#">Виртуальная реальность</a></li>
+				<li class="assortment__item assortment__item--monopods"><a href="#">Моноподы для селфи</a></li>
+				<li class="assortment__item assortment__item--actioncams"><a href="#">Экшн-камеры</a></li>
+				<li class="assortment__item assortment__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
+				<li class="assortment__item assortment__item--clocks"><a href="#">Умные часы</a></li>
+				<li class="assortment__item assortment__item--copters"><a href="#">Квадрокоптеры</a></li>
 			</ul>
 		</nav>
 
@@ -55,11 +56,12 @@
 
 		<section class="clients">
 			<h2 class="visually-hidden">Наши клиенты</h2>
-			<ul class="clients-list">
-				<li class="clients-list__item clients-list__item_dji"><a href="" title="DJI">DJI</a></li>
-				<li class="clients-list__item clients-list__item_spg"><a href="" title="SP Gadgets">SP Gadgets</a></li>
-				<li class="clients-list__item clients-list__item_gopro"><a href="" title="GoPro">GoPro</a></li>
-				<li class="clients-list__item clients-list__item_vive"><a href="" title="Vive">Vive</a></li>
+			<ul class="clients__list">
+				<!-- изначально разметил с модификаторами, сейчас сомневаюсь, что они нужны -->
+				<li class="clients__item clients__item--dji"><a href="" title="DJI"><img src="img/clients/dji_logo.png" width="260" height="100" alt="DJI"></a></li>
+				<li class="clients__item clients__item--spg"><a href="" title="SP Gadgets"><img src="img/clients/spg_logo.png" width="260" height="100" alt="SP Gadgets"></a></li>
+				<li class="clients__item clients__item--gopro"><a href="" title="GoPro"><img src="img/clients/gopro_logo.png" width="260" height="100" alt="GoPro"></a></li>
+				<li class="clients__item clients__item--vive"><a href="" title="Vive"><img src="img/clients/vive_logo.png" width="260" height="100" alt="Vive"></a></li>
 			</ul>
 		</section>
 		
@@ -67,23 +69,23 @@
 			<!-- В данном случае класс about__column введен, т.к обе колонки одинаковы в своих размерах, отступах и тд, 
 				а доп. классы info и contacts введены для позиционирования, в принципе это можно сделать и через селекторы
 				но как правильнее, используя бэм, я не могу сказать с уверенностью-->
-			<div class="about__column info">
-				<h2 class="about-title">О нас</h2>
+			<div class="about__column">
+				<h2 class="about__title">О нас</h2>
 				<p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 				<p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 
-				<ul class="delivery-list">
-					<li class="delivery-list__item"><a href="https://www.dellin.ru/">Деловые линии</a></li>
-					<li class="delivery-list__item"><a href="ae5000.ru/">Автотрединг</a></li>
-					<li class="delivery-list__item"><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
+				<ul class="delivery__list">
+					<li class="delivery__item"><a href="https://www.dellin.ru/">Деловые линии</a></li>
+					<li class="delivery__item"><a href="ae5000.ru/">Автотрединг</a></li>
+					<li class="delivery__item"><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
 				</ul>
 				<a href="" class="about-btn btn">Подробнее о нас</a>
 			</div>
 
-			<div class="about__column contacts">
-				<h2 class="about-title">Контакты</h2>
+			<div class="about__column">
+				<h2 class="about__title">Контакты</h2>
 				<p class="about__text">Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работспособность покуки. Всякое бывает.</p>
-				<img src="img/device-map.jpg" alt="Как добраться до DEVICE">
+				<img src="img/content/map.jpg" alt="Как добраться до DEVICE">
 				<button type="button" class="about-btn btn">Напишите нам</button>
 			</div>
 		</section>
@@ -94,7 +96,7 @@
 
    <footer class="footer">
 		<div class="footer-top">
-			<div class="logo footer-logo"><img src="#" alt="Логотип компании Device"></div>
+			<div class="logo footer-logo"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></div>
 			<ul class="user-menu footer-user-menu">
 				<li class="user-menu__item user-menu__item--sign-in"><a href="">Войти</a></li>
 				<li class="user-menu__item user-menu__item--sign-compare"><a href="">Сравнить</a></li>
@@ -113,13 +115,13 @@
 		</div>
 
 		<div class="footer-links">
-			<ul class="footer-social">
-				<li class="footer-social__item footer-social__item--fb"><a href="#">Facebook</a></li>
-				<li class="footer-social__item footer-social__item--ig"><a href="#">Instagram</a></li>
-				<li class="footer-social__item footer-social__item--tw"><a href="#">Twitter</a></li>
+			<ul class="footer__social social">
+				<li class="social__item social__item--fb"><a href="#">Facebook</a></li>
+				<li class="social__item social__item--ig"><a href="#">Instagram</a></li>
+				<li class="social__item social__item--tw"><a href="#">Twitter</a></li>
 			</ul>
 			<a class="footer-copyright" href="https://htmlacademy.ru">
-				<img src="#" alt="HTML Academy">
+				<img src="img/links/logo-html.svg" alt="HTML Academy">
 			</a>
 		</div>
 	</footer>
