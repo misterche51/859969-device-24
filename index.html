@@ -11,32 +11,30 @@
 
 			<div class="header-top">
 				<form class="header__searcher" action="https://echo.htmlacademy.ru/" method="get">
-					<!-- вот тут какой-то замес, можно в данном случае в лейбл завернуть 2 элемента, чтобы не проставлять айди? прием увидел в скринкасте, решил уточнить здесь -->
-					<label>
-						<button type="submit" aria-label="Поиск по сайту">
-							<img src="img/interface/search.svg">
-						</button>
-						<input type="search" name="header-searcher" placeholder="Поиск по сайту">
-					</label>
+					<label for="header-searcher" class="visually-hidden">Введите текст запроса</label>
+					<button type="submit" aria-label="Поиск по сайту">
+						<img src="img/interface/search.svg">
+					</button>
+					<input type="search" id="header-searcher" name="header-searcher" placeholder="Поиск по сайту">
 				</form>
 
-				<ul class="user-menu header-user-menu">
-					<li class="user-menu__item user-menu__item--sign-in"><a href="login.html">Войти</a></li>
-					<li class="user-menu__item user-menu__item--sign-compare"><a href="">Сравнить</a></li>
-					<li class="user-menu__item user-menu__item--sign-cart"><a href="">Корзина</a></li>
+				<ul class="user-menu header__user-menu">
+					<li class="user-menu__item user-menu__item--signin"><a href="login.html">Войти</a></li>
+					<li class="user-menu__item user-menu__item--compare"><a href="">Сравнить</a></li>
+					<li class="user-menu__item user-menu__item--cart"><a href="">Корзина</a></li>
 				</ul>		
 			</div>
 
 			<div class="header-menu">
 				<ul class="header-menu-list">
-					<li class="header-menu__item header-menu__item--catalog"><a href="">Каталог товаров</a>
-						<ul class="header-catalog-menu">
-							<li class="header-catalog__item"><a href="#">Виртуальная реальность</a></li>
-							<li class="header-catalog__item"><a href="#">Моноподы для селфи</a></li>
-							<li class="header-catalog__item"><a href="#">Экшн-камеры</a></li>
-							<li class="header-catalog__item"><a href="#">Фитнес-браслеты</a></li>
-							<li class="header-catalog__item"><a href="#">Умные часы</a></li>
-							<li class="header-catalog__item"><a href="#">Квадрокоптеры</a></li>
+					<li class="header-menu__item header-menu__item--catalog dropdown"><a href="">Каталог товаров</a>
+						<ul class="dropdown__menu">
+							<li class="dropdown__item"><a href="#">Виртуальная реальность</a></li>
+							<li class="dropdown__item"><a href="#">Моноподы для селфи</a></li>
+							<li class="dropdown__item"><a href="#">Экшн-камеры</a></li>
+							<li class="dropdown__item"><a href="#">Фитнес-браслеты</a></li>
+							<li class="dropdown__item"><a href="#">Умные часы</a></li>
+							<li class="dropdown__item"><a href="#">Квадрокоптеры</a></li>
 						</ul>
 					</li>
 					<li class="header-menu__item"><a href="">Гарантии</a></li>
@@ -46,75 +44,76 @@
 			</div>
 		</div>
 	</header>
-
-	<main>
-		
-		<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
-		<!-- решил тут не плодить дивы здесь, просто добавил второй класс для центровки -->
-		<nav class="assortment wrapper">
-			<h2 class="visually-hidden">Каталог товаров</h2>
-			<ul class="assortment__list"> 
-				<li class="assortment__item assortment__item--vr"><a href="#">Виртуальная реальность</a></li>
-				<li class="assortment__item assortment__item--monopods"><a href="#">Моноподы для селфи</a></li>
-				<li class="assortment__item assortment__item--actioncams"><a href="#">Экшн-камеры</a></li>
-				<li class="assortment__item assortment__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
-				<li class="assortment__item assortment__item--clocks"><a href="#">Умные часы</a></li>
-				<li class="assortment__item assortment__item--copters"><a href="#">Квадрокоптеры</a></li>
-			</ul>
-		</nav>
+	<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
+		<section class="assortment">
+			<h2 class="visually-hidden">Разделы каталога </h2>
+			<nav class="wrapper">
+				<ul class="assortment__list"> 
+					<li class="assortment__item assortment__item--vr"><a href="#">Виртуальная реальность</a></li>
+					<li class="assortment__item assortment__item--monopods"><a href="#">Моноподы для селфи</a></li>
+					<li class="assortment__item assortment__item--actioncams"><a href="#">Экшн-камеры</a></li>
+					<li class="assortment__item assortment__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
+					<li class="assortment__item assortment__item--clocks"><a href="#">Умные часы</a></li>
+					<li class="assortment__item assortment__item--copters"><a href="#">Квадрокоптеры</a></li>
+				</ul>
+			</nav>
+		</section>
 
 		<!-- Здесь будет слайдер с фичами компании -->
 
 		<section class="clients">
 			<h2 class="visually-hidden">Наши клиенты</h2>
-				<div class="wrapper">
-					<ul class="clients__list">
-						<li class="clients__item clients__item--dji">
-							<a href="https://www.dji.com/ru">
-								<img src="img/clients/dji_logo.png" width="260" height="100" alt="Компания DJI">
-							</a>
-						</li>
-						<li class="clients__item clients__item--spg">
-							<a href="www.sp-gadgets.com/">
-								<img src="img/clients/spg_logo.png" width="260" height="100" alt="Компания SP Gadgets">
-							</a>
-						</li>
-						<li class="clients__item clients__item--gopro">
-							<a href="https://gopro.com/">
-								<img src="img/clients/gopro_logo.png" width="260" height="100" alt="Компания GoPro">
-							</a>
-						</li>
-						<li class="clients__item clients__item--vive">
-							<a href="https://www.vive.com/ru/">
-								<img src="img/clients/vive_logo.png" width="260" height="100" alt="Компания Vive">
-							</a>
-						</li>
-					</ul>
-				</div>
+			<nav class="wrapper">
+				<ul class="clients__list">
+					<li class="clients__item clients__item--dji">
+						<a href="https://www.dji.com/ru">
+							<img src="img/clients/dji_logo.png" width="260" height="100" alt="Компания DJI">
+						</a>
+					</li>
+					<li class="clients__item clients__item--spg">
+						<a href="www.sp-gadgets.com/">
+							<img src="img/clients/spg_logo.png" width="260" height="100" alt="Компания SP Gadgets">
+						</a>
+					</li>
+					<li class="clients__item clients__item--gopro">
+						<a href="https://gopro.com/">
+							<img src="img/clients/gopro_logo.png" width="260" height="100" alt="Компания GoPro">
+						</a>
+					</li>
+					<li class="clients__item clients__item--vive">
+						<a href="https://www.vive.com/ru/">
+							<img src="img/clients/vive_logo.png" width="260" height="100" alt="Компания Vive">
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</section>
 		
 
 		<section class="about">
+			<h2 class="visually-hidden">Информация про магазин DEVICE</h2>
 			<div class="wrapper">
-				<div class="about__column">
-					<h2 class="about__title">О нас</h2>
-					<p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-					<p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+				<div class="about__info">
+					<section class="about__column">
+						<h3 class="about__title">О нас</h3>
+						<p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+						<p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 
-					<ul class="delivery__list">
-						<li class="delivery__item"><a href="https://www.dellin.ru/">Деловые линии</a></li>
-						<li class="delivery__item"><a href="ae5000.ru/">Автотрединг</a></li>
-						<li class="delivery__item"><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
-					</ul>
-					<a href="" class="about-btn btn">Подробнее о нас</a>
-				</div>
+						<ul class="delivery__list">
+							<li class="delivery__item"><a href="https://www.dellin.ru/">Деловые линии</a></li>
+							<li class="delivery__item"><a href="ae5000.ru/">Автотрединг</a></li>
+							<li class="delivery__item"><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
+						</ul>
+						<a href="" class="about__btn btn">Подробнее о нас</a>
+					</section>
 
-				<div class="about__column">
-					<h2 class="about__title">Контакты</h2>
-					<p class="about__text">Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работспособность покуки. Всякое бывает.</p>
-					<img src="img/content/map.jpg" alt="Как до нас добраться">
-					<button type="button" class="about-btn btn">Напишите нам</button>
-				</div>
+					<section class="about__column">
+						<h3 class="about__title">Контакты</h3>
+						<p class="about__text">Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работспособность покуки. Всякое бывает.</p>
+						<img src="img/content/map.jpg" alt="Как до нас добраться">
+						<button type="button" class="about__btn btn">Напишите нам</button>
+					</section>					
+				</div>				
 			</div>
 		</section>
 	</main>
@@ -122,34 +121,34 @@
 
 
 
-   <footer class="footer">
+   	<footer class="footer">
    		<div class="wrapper">
-			<div class="footer-top">
+			<div class="footer__top">
 				<div class="logo footer-logo"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></div>
-				<ul class="user-menu footer-user-menu">
-					<li class="user-menu__item user-menu__item--sign-in"><a href="">Войти</a></li>
-					<li class="user-menu__item user-menu__item--sign-compare"><a href="">Сравнить</a></li>
-					<li class="user-menu__item user-menu__item--sign-cart"><a href="">Корзина</a></li>
+				<ul class="user-menu footer__user-menu">
+					<li class="user-menu__item user-menu__item--signin"><a href="">Войти</a></li>
+					<li class="user-menu__item user-menu__item--compare"><a href="">Сравнить</a></li>
+					<li class="user-menu__item user-menu__item--cart"><a href="">Корзина</a></li>
 				</ul>	
 			</div>
 
-			<div class="footer-middle">
+			<div class="footer__middle">
 				<address class="footer-adress">г.Москва, ул. Строителей 15</address>
 				<ul class="footer-menu">
 					<li class="footer-menu__item"><a href="#">Доставка</a></li>
 					<li class="footer-menu__item"><a href="#">Гарантия</a></li>
 					<li class="footer-menu__item"><a href="#">Контакты</a></li>
 				</ul>
-				<a class="footer-tel" href="tel:+7(495)4959595">Тел: +7(495)495-95-95</a>
+				<a class="footer__tel" href="tel:+7(495)4959595">Тел: +7(495)495-95-95</a>
 			</div>
 
-			<div class="footer-links">
+			<div class="footer__links">
 				<ul class="footer__social social">
 					<li class="social__item social__item--fb"><a href="#" aria-label="Device на Facebook"></a></li>
 					<li class="social__item social__item--ig"><a href="#" aria-label="Device в Instagram"></a></li>
 					<li class="social__item social__item--tw"><a href="#" aria-label="Device в Twitter"></a></li>
 				</ul>
-				<a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработан HTML Academy">
+				<a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработан HTML Academy">
 					<img src="img/links/logo-html.svg">
 				</a>
 			</div>
@@ -160,10 +159,10 @@
 
 	<!-- модалки -->
 
-	<section class="modal modal-feedback">
+	<section class="modal modal-feedback" id="modal-feedback">
 		<h3 class="visually-hidden">Форма обратной связи</h3>
-		<div class="modal-feedback__wrapper">
-			<button type="buttton" class="modal__btn-exit">Закрыть</button>
+		<div class="modal__wrapper">
+			<button type="button" class="modal__btn-exit">Закрыть</button>
 			<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
 				<fieldset class="form__userinfo">
 					<legend class="visually-hidden">Данные о пользователе</legend>
@@ -182,10 +181,13 @@
 			</form>
 		</div>
 	</section>
-	<section class="modal modal-map">
+
+	<section class="modal modal-map" id="modal-map">
 		<h3 class="visually-hidden">Как до нас добраться</h3>
-		<button type="buttton" class="modal__btn-exit">Закрыть</button>
-		<img src="img/content/map-modal.jpg" width="960" height="559" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15">
+		<div class="modal__wrapper">
+			<button type="button" class="modal__btn-exit">Закрыть</button>
+			<img src="img/content/map-modal.jpg" width="960" height="559" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15">
+		</div>
 	</section>
 
 
