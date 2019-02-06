@@ -166,11 +166,14 @@
 			<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
 				<fieldset class="form__userinfo">
 					<legend class="visually-hidden">Данные о пользователе</legend>
-					<label for="username" class="form__field-title">Ваше имя:</label>
-					<input type="text" name="username" id="username" class="form__field form__field--username" placeholder="Имя Фамилия">
-
-	   				<label for="usermail" class="form__field-title ">Ваш email:</label>
-					<input type="email" name="usermail" id="usermail" class="form__field form__field--usermail" placeholder="email@example.com">
+					<div class="form__userinfo-item">
+						<label for="username" class="form__field-title">Ваше имя:</label>
+						<input type="text" name="username" id="username" class="form__field form__field--username" placeholder="Имя Фамилия">
+					</div>
+					<div class="form__userinfo-item">
+						<label for="usermail" class="form__field-title ">Ваш email:</label>
+						<input type="email" name="usermail" id="usermail" class="form__field form__field--usermail" placeholder="email@example.com">
+					</div>
 				</fieldset>
 				<fieldset class="form__usermessage">
 					<legend class="visually-hidden">Что вас интересует?</legend>
