@@ -1,0 +1,297 @@
+@font-face {
+    font-family: GilroyExtraBold;
+    src: url("gilroyextrabold.woff2") format("woff2");/*,
+         url("fonts/gilroyextrabold.woff") format("woff");*/
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: OpenSansLight;
+    src: url("opensanslight.woff2") format("woff2");/*,
+         url("fonts/gilroyextrabold.woff") format("woff");*/
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	font-family: GilroyExtraBold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+	background-color: #f7e296;
+}
+
+.header a,
+.assortment__list a,
+.delivery__item a {
+	color: #000000;
+}
+
+.header a:hover,
+.header a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.header a:active,
+.assortment__list a:active,
+.delivery__item a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.user-menu {
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+ul {
+	list-style: none;
+}
+
+
+.header-menu__item,
+.footer-menu__item {
+	font-family: GilroyExtraBold;
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.header-menu__item {
+	color: #000000;
+}
+
+.dropdown__item  {
+	text-transform: none;
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 36px;
+	color: #000000;
+	letter-spacing: 0px;
+}
+
+.assortment__item {
+	font-family: GilroyExtraBold;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+
+h3.about__title {
+	font-family: GilroyExtraBold;
+	font-size: 47px;
+	line-height: 48px;
+	color: #000000;
+}
+
+p.about__text {
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+	color: #464646;
+}
+
+
+.footer {
+	background-color: #464646;
+}
+
+.footer__user-menu a {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__user-menu a:hover,
+.footer__user-menu a:focus {
+	color: #ffffff;
+}
+
+.footer__user-menu a:active {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__address, 
+.footer__tel {
+	font-style: normal;
+	font-family: OpenSansLight;
+	color: #ffffff;
+}
+
+.footer-menu__item a {
+	color: #ffffff;
+}
+
+.footer-menu__item a:hover,
+.footer-menu__item a:focus {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-menu__item a:active {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+	font-family: GilroyExtraBold;
+	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+h1 {
+	font-size: 47px;
+	line-height: 48px;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3)
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+	color: rgba(0, 0, 0, 0.6)
+}
+
+.breadcrumbs a:active {
+	color: rgba(0, 0, 0, 0.1)
+}
+
+
+.top-left__title,
+.top-right__title {
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 3px;
+}
+
+.sorting input {
+	/*display: none;*/
+}
+
+.sorting label {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 18px; 
+	opacity: 0.3;
+}
+
+.sorting label:hover {
+	opacity: 0.6;
+}
+
+/*понимаю, что псевдокласс checked 
+здесь не подходит, но как тогда отображаться чекнутый инпут при display none*/
+.sorting input:active,
+.sorting input:checked {
+	opacity: 1;
+}
+
+.catalog__item-name {
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.catalog__item-price {
+	font-family: OpenSansLight;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.catalog__item-campare {
+	font-family: OpenSansLight;
+	font-size: 13px;
+	line-height: 36px;
+}
+
+.filter__color-list,
+.filter__bluetooth-list {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.pagination__item a {
+	font-size: 16px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination__item a:hover,
+.pagination__item a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination__item a:active {
+	color: #000000;
+}
+
+.pagination__nav--back a,
+.pagination__nav--forward a {
+	display: block;
+	background-color: transparent;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.pagination__nav--back a:hover,
+.pagination__nav--back a:focus,
+.pagination__nav--forward a:hover,
+.pagination__nav--forward a:focus {
+	background-color: #d9d9d9;
+}
+
+.pagination__nav--back a:active,
+.pagination__nav--forwardk a:active {
+	background-color: #d9d9d9;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.social a {
+	opacity: 0.3;
+}
+
+.social a:hover,
+.social a:focus {
+	opacity: 0.6;
+}
+
+.social a:active {
+	opacity: 0.1;
+}
+
+.footer__copyright:hover,
+.footer__copyright:focus {
+	opacity: 0.6;
+}
+
+.footer__copyright:active {
+	opacity: 0.3;
+}
+
+.modal label {
+	font-size: 18px;
+	line-height: 24px;
+}
