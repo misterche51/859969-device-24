@@ -1,0 +1,740 @@
+@font-face {
+    font-family: GilroyExtraBold;
+    src: url("gilroyextrabold.woff2") format("woff2");/*,
+         url("fonts/gilroyextrabold.woff") format("woff");*/
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: OpenSansLight;
+    src: url("opensanslight.woff2") format("woff2");/*,
+         url("fonts/gilroyextrabold.woff") format("woff");*/
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	font-family: GilroyExtraBold;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+}
+
+/*.header {
+	background-color: #f7e296;
+}
+*/
+.header a,
+.assortment__list a,
+.delivery__item a {
+	color: #000000;
+}
+
+.header a:hover,
+.header a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.header a:active,
+.assortment__list a:active,
+.delivery__item a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.user-menu {
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+ul {
+	list-style: none;
+}
+
+
+.header-menu__item,
+.footer-menu__item {
+	font-family: GilroyExtraBold;
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.header-menu__item {
+	color: #000000;
+}
+
+.dropdown__item  {
+	text-transform: none;
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 36px;
+	color: #000000;
+	letter-spacing: 0px;
+}
+
+.assortment__item {
+	font-family: GilroyExtraBold;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+
+h3.about__title {
+	font-family: GilroyExtraBold;
+	font-size: 47px;
+	line-height: 48px;
+	color: #000000;
+}
+
+p.about__text {
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+	color: #464646;
+}
+
+
+.footer {
+	background-color: #464646;
+}
+
+.footer__user-menu a {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__user-menu a:hover,
+.footer__user-menu a:focus {
+	color: #ffffff;
+}
+
+.footer__user-menu a:active {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__address, 
+.footer__tel {
+	font-style: normal;
+	font-family: OpenSansLight;
+	color: #ffffff;
+}
+
+.footer-menu__item a {
+	color: #ffffff;
+}
+
+.footer-menu__item a:hover,
+.footer-menu__item a:focus {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-menu__item a:active {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+	/*сбросил стили*/
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.btn {
+	font-family: GilroyExtraBold;
+	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+
+/* пытался стилизовать кнопку и оформить эффект, не вышло ;(*/
+.decorative-btn {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 8px;
+	background-color: rgb(255,198,0);
+	bottom: calc(50% - 4px);
+
+	z-index: -9;
+	
+}
+
+.decorative-btn:hover {
+	height: 28px;
+}
+
+
+h1 {
+	font-size: 47px;
+	line-height: 48px;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3)
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+	color: rgba(0, 0, 0, 0.6)
+}
+
+.breadcrumbs a:active {
+	color: rgba(0, 0, 0, 0.1)
+}
+
+
+.top-left__title,
+.top-right__title {
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 3px;
+}
+
+.sorting input {
+	/*display: none;*/
+}
+
+.sorting label {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 18px; 
+	opacity: 0.3;
+}
+
+.sorting label:hover {
+	opacity: 0.6;
+}
+
+/*понимаю, что псевдокласс checked 
+здесь не подходит, но как тогда отображаться чекнутый инпут при display none*/
+.sorting input:active,
+.sorting input:checked {
+	opacity: 1;
+}
+
+h3 {
+	margin: 0;
+}
+
+.catalog__item-name {
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.catalog__item-price {
+	font-family: OpenSansLight;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.catalog__item-campare {
+	font-family: OpenSansLight;
+	font-size: 13px;
+	line-height: 36px;
+}
+
+.filter__color-list,
+.filter__bluetooth-list {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.pagination__item a {
+	font-size: 16px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination__item a:hover,
+.pagination__item a:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination__item a:active {
+	color: #000000;
+}
+
+.pagination__nav--back a,
+.pagination__nav--forward a {
+	display: block;
+	background-color: transparent;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.pagination__nav--back a:hover,
+.pagination__nav--back a:focus,
+.pagination__nav--forward a:hover,
+.pagination__nav--forward a:focus {
+	background-color: #d9d9d9;
+}
+
+.pagination__nav--back a:active,
+.pagination__nav--forwardk a:active {
+	background-color: #d9d9d9;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.social a:active {
+	opacity: 0.1;
+}
+
+.footer__copyright:hover,
+.footer__copyright:focus,
+.footer-logo:hover,
+.footer-logo:focus,
+.social a:hover,
+.social a:focus {
+	opacity: 0.6;
+}
+
+.footer__copyright:active,
+.footer-logo:active,
+.social a {
+	opacity: 0.3;
+}
+
+.modal label {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+
+
+
+/*разметка сетки*/
+
+ul {
+	padding-left: 0;
+}
+
+.header {
+	width: 100%;
+}
+
+.wrapper {
+	width: 1200px;
+
+	padding-left: 20px;
+	padding-right: 20px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header .wrapper {
+	background-color: rgba(247,226,150,0.5);
+	padding: 0 60px;
+}
+
+.header-logo {
+	margin-bottom: 35px;
+	height: 35px;
+}
+
+.header-top {
+	height: 15px;
+	margin-bottom: 50px;
+}
+
+.header__searcher {
+	width: 340px;
+	margin-left: 0;
+}
+
+.header__user-menu {
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+	margin-right: 0;
+
+}
+.header__user-menu .user-menu__item--compare {
+	margin-left: auto;
+	margin-right: 40px;
+}
+
+.user-menu__item,
+.header-menu__item {
+	display: inline-block;
+}
+
+.header-menu__rightitems {
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-menu__item--contacts {
+	width: 200px;
+	text-align: right;
+}
+
+.header-top,
+.header-menu-list,
+.assortment__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.clients__list {
+	min-height: 100px;
+	margin-bottom: 95px;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+.about {
+	min-height: 560px;
+	position: relative;
+
+	margin-bottom: 95px;
+}
+
+.about__info {
+	display: flex;
+	margin: 0 20px;
+}
+
+.about__title {
+	margin-bottom: 60px;
+}
+
+.about__text {
+	margin-bottom: 45px;
+}
+
+.about__column {
+	width: 560px;
+	height: 100%;
+}
+
+.about__column .decorative-line {
+	background-color: #000000;
+	margin-bottom: 50px;
+}
+
+.delivery__list {
+	margin-top: 90px;
+	padding-left: 35px;
+}
+
+a.about__btn {
+	display: block;
+}
+
+.about__btn {
+	position: absolute;
+	bottom: 0;
+	width: 260px;
+	text-align: center;
+}
+
+.footer {
+	min-height: 323px;
+}
+
+.footer .wrapper {
+	padding: 65px 20px;
+}
+
+.footer__top,
+.footer__middle,
+.footer__links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__top {
+	margin-bottom: 40px;
+}
+
+.footer__middle {
+	margin-bottom: 70px;
+}
+
+.footer-logo {
+	width: 200px;
+}
+
+.footer__user-menu {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.footer__middle,
+.footer__links {
+	align-items: center;
+}
+
+.footer-menu {
+	width: 440px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__address {
+	width: 210px;
+
+}
+
+.footer__tel {
+	display: block;
+	width: 210px;
+	text-align: right;
+}
+
+.footer-menu__item,
+.social__item {
+	display: inline-block;
+}
+
+.decorative-line {
+	content: "";
+	width: 80px;
+	height: 7px;
+	background-color: rgb(255,198,0);
+}
+
+.footer__social {
+	width: 160px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer__copyright {
+	width: 80px;
+	text-align: right;
+}
+
+
+/*страница моноподс сетка*/
+
+
+.breadcrumbs li,
+.sorting__criterion,
+.sorting__direction  {
+	display: inline-block;
+}
+
+.catalog__top {
+	display: flex;
+	justify-content: space-between;
+	height: 70px;
+	min-width: 1440px;
+}
+
+.catalog__top-left {
+	width: 33%;
+	min-width: 470px;
+	background-color: rgb(220,220,220);
+}
+.catalog__top-right {
+	width: 67%;
+	min-width: 970px;
+	background-color: rgb(235,235,235);
+	margin-left: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.top-right__title {
+	display: inline-block;
+	width: 160px;
+}
+
+.sorting__criterion {
+	width: 300px;
+}
+
+
+.catalog__sorting {
+	width: 560px;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.sorting__direction {
+	margin-left: auto;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.catalog__list {
+	margin-left: auto;
+	width: 760px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: space-between; 
+}
+
+.catalog__item {
+	width: 360px;
+	height: 460px;
+	box-sizing: border-box;
+}
+
+.catalog__item,
+.filter {
+	margin-top: 70px;
+}
+
+.catalog__item-image {
+	margin-bottom: 40px;
+}
+
+.catalog__item-info {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.catalog__item-title {
+	width: 260px;
+}
+
+.catalog__item-price {
+	width: 80px;
+	text-align: right;
+	padding: 0;
+}
+
+.catalog__item-page {
+	width: 200px;
+}
+
+/*временно скрыл*/
+.catalog__item-page,
+.catalog__item-campare {
+	display: none;
+}
+
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.catalog__filter {
+	display: inline-block;
+	width: 300px;
+	order: 0;
+}
+
+.catalog__showcase {
+	display: inline-block;
+	width: 830px;
+	margin-left: auto;
+	order: 1;
+}
+
+.pagination {
+	box-sizing: border-box;
+	margin-top: 40px;
+	margin-left: auto;
+	
+	width: 760px;
+	height: 70px;
+	background-color: rgb(235, 235, 235);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 77px;
+}
+/*нужно ли это правило, чтобы все кнопки пагинации в не зависимости от текущей, были единообразны*/
+.pagination li {
+	cursor: pointer;
+}
+
+.pagination__nav--numbers {
+	width: 160px;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.pagination__nav--back,
+.pagination__nav--forward {
+	box-sizing: border-box;
+	width: 136px;
+	height: 100%;
+}
+
+.pagination__nav--back a,
+.pagination__nav--forward a {
+	width: inherit;
+	height: inherit;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 23px;
+}
+
+/*стилизую фильтр*/
+
+.filter legend {
+	display: block;
+	padding-top: 20px;
+	border-top: 2px solid #000000;
+	width: 200px;
+}
+
+.filter fieldset {
+	margin-bottom: 40px;
+}
