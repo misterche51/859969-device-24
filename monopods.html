@@ -31,19 +31,16 @@
 					<li class="header-menu__item header-menu__item--catalog dropdown"><a href="">Каталог товаров</a>
 						<ul class="dropdown__menu">
 							<li class="dropdown__item"><a href="#">Виртуальная реальность</a></li>
-							<li class="dropdown__item"><a href="#">Моноподы для селфи</a></li>
+							<li class="dropdown__item"><a href="monopods.html">Моноподы для селфи</a></li>
 							<li class="dropdown__item"><a href="#">Экшн-камеры</a></li>
-							<li class="dropdown__item"><a href="#">Фитнес-браслеты</a></li>
-							<li class="dropdown__item"><a href="#">Умные часы</a></li>
-							<li class="dropdown__item"><a href="#">Квадрокоптеры</a></li>
+							<li class="dropdown__item dropdown__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
+							<li class="dropdown__item dropdown__item--clocks"><a href="#">Умные часы</a></li>
+							<li class="dropdown__item dropdown__item--copters"><a href="#">Квадрокоптеры</a></li>
 						</ul>
 					</li>
-					<div class="header-menu__rightitems">
-						<li class="header-menu__item"><a href="">Гарантии</a></li>
-						<li class="header-menu__item"><a href="">Доставка</a></li>
-						<li class="header-menu__item header-menu__item--contacts"><a href="">Контакты</a></li>
-					</div>
-					
+					<li class="header-menu__item header-menu__item--delivery"><a href="">Доставка</a></li>
+					<li class="header-menu__item header-menu__item--warranty"><a href="">Гарантии</a></li>
+					<li class="header-menu__item header-menu__item--contacts"><a href="">Контакты</a></li>					
 				</ul>
 			</div>
 		</div>
@@ -53,39 +50,42 @@
     	<div class="wrapper">
 	      	<h1 class="page-title">Моноподы для селфи</h1>
 			<ul class="breadcrumbs">
-		        <li><a href="index.html">Главная</a></li>
-		        <li><a href="catalog.html">Каталог товаров</a></li>
-		        <li class="breadcrumbs-current">Моноподы для селфи</li>
+		        <li><a href="index.html">Главная</a></li
+		        ><li><a href="#">Каталог товаров</a></li
+		        ><li class="breadcrumbs-current">Моноподы для селфи</li>
 	      	</ul>
       	</div>
 	   	<div class="catalog">
 	   		<div class="catalog__top">
-	   				<!-- ввести новые блоки для сетки???? -->
-	   			<div class="catalog__top-left top-left">
-	   				<span class="top-left__title">Фильтр:</span>
-	   			</div>
-	   			<div class="catalog__top-right">
-	   				<span class="top-right__title">Сортировка:</span>
-	   				<form class="catalog__sorting sorting">
-	   					<fieldset class="sorting__criterion">
-	   						<input type="radio" name="category" class="criterion__item" value="price" id="sorting-price" checked>
-	   						<label class="criterion__name"	for="sorting-price">По цене</label>
+	   			<div class="wrapper">
+	   				<div class="container">
+	   					<div class="catalog__top-left top-left">
+		   					<span class="top-left__title">Фильтр:</span>
+			   			</div>
+			   			<div class="catalog__top-right">
+			   				<span class="top-right__title">Сортировка:</span>
+			   				<form class="catalog__sorting sorting">
+			   					<fieldset class="sorting__criterion">
+			   						<input type="radio" name="category" class="criterion__item visually-hidden" value="price" id="sorting-price" checked>
+			   						<label class="criterion__name"	for="sorting-price">По цене</label>
 
-	   						<input type="radio" name="category" class="criterion__item" value="type" id="sorting-type">
-	   						<label class="criterion__name" for="sorting-type">По типу</label>	
+			   						<input type="radio" name="category" class="criterion__item visually-hidden" value="type" id="sorting-type">
+			   						<label class="criterion__name" for="sorting-type">По типу</label>	
 
-	   						<input type="radio" name="category" class="criterion__item" value="popularity" id="sorting-popular">
-	   						<label class="criterion__name" for="sorting-popular">По популярности</label>
-	   					</fieldset>
-	   					<fieldset class="sorting__direction direction">
-	   						<input type="radio" class="direction__item--to-top" name="direction" value="to-top" id="to-top">
-	   						<label for="to-top"><img src="img/interface/icon-up-dir.svg" alt="По возрастанию"></label>
-	   							
-	   						<input type="radio" class="direction__item--to-bottom" name="direction" value="to-bottom" id="to-bottom" checked>
-	   						<label for="to-bottom"><img src="img/interface/icon-down-dir.svg" alt="По убыванию"></label>  				
-	   					</fieldset>	  
-	   				</form>
-	   			</div>		
+			   						<input type="radio" name="category" class="criterion__item visually-hidden" value="popularity" id="sorting-popular">
+			   						<label class="criterion__name" for="sorting-popular">По популярности</label>
+			   					</fieldset>
+			   					<fieldset class="sorting__direction direction">
+			   						<input type="radio" class="direction__item--to-top visually-hidden" name="direction" value="to-top" id="to-top">
+			   						<label for="to-top"><img src="img/interface/icon-up-dir.svg" alt="По возрастанию"></label>
+			   							
+			   						<input type="radio" class="direction__item--to-bottom visually-hidden" name="direction" value="to-bottom" id="to-bottom" checked>
+			   						<label for="to-bottom"><img src="img/interface/icon-down-dir.svg" alt="По убыванию"></label>  				
+			   					</fieldset>	  
+			   				</form>
+			   			</div>
+	   				</div>
+		   		</div>		
 	   		</div>
 
 	   		
@@ -200,10 +200,10 @@
 	   	</div>
    </main>
 
-   <footer class="footer">
+   	<footer class="footer">
    		<div class="wrapper">
 			<div class="footer__top">
-				<div class="logo footer-logo"><img src="img/decorative/logo-device-footer.svg" width="163" height="35" alt="Логотип компании Device"></div>
+				<div class="logo footer-logo"><a href="index.html"><img src="img/decorative/logo-device-footer.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 				<ul class="user-menu footer__user-menu">
 					<li class="user-menu__item user-menu__item--signin"><a href="">Войти</a></li>
 					<li class="user-menu__item user-menu__item--compare"><a href="">Сравнить</a></li>

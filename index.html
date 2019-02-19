@@ -31,30 +31,32 @@
 					<li class="header-menu__item header-menu__item--catalog dropdown"><a href="">Каталог товаров</a>
 						<ul class="dropdown__menu">
 							<li class="dropdown__item"><a href="#">Виртуальная реальность</a></li>
-							<li class="dropdown__item"><a href="#">Моноподы для селфи</a></li>
+							<li class="dropdown__item"><a href="monopods.html">Моноподы для селфи</a></li>
 							<li class="dropdown__item"><a href="#">Экшн-камеры</a></li>
-							<li class="dropdown__item"><a href="#">Фитнес-браслеты</a></li>
-							<li class="dropdown__item"><a href="#">Умные часы</a></li>
-							<li class="dropdown__item"><a href="#">Квадрокоптеры</a></li>
+							<li class="dropdown__item dropdown__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
+							<li class="dropdown__item dropdown__item--clocks"><a href="#">Умные часы</a></li>
+							<li class="dropdown__item dropdown__item--copters"><a href="#">Квадрокоптеры</a></li>
 						</ul>
 					</li>
-					<div class="header-menu__rightitems">
-						<li class="header-menu__item"><a href="">Гарантии</a></li>
-						<li class="header-menu__item"><a href="">Доставка</a></li>
-						<li class="header-menu__item header-menu__item--contacts"><a href="">Контакты</a></li>
-					</div>
-					
+					<li class="header-menu__item header-menu__item--delivery"><a href="">Доставка</a></li>
+					<li class="header-menu__item header-menu__item--warranty"><a href="">Гарантии</a></li>
+					<li class="header-menu__item header-menu__item--contacts"><a href="">Контакты</a></li>					
 				</ul>
 			</div>
 		</div>
 	</header>
+
+	<!-- Для удобства дальнейшей разметки -->
+	<div class="banner-1"></div>
+
+
 	<h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
 		<section class="assortment">
 			<h2 class="visually-hidden">Разделы каталога </h2>
 			<nav class="wrapper">
 				<ul class="assortment__list"> 
 					<li class="assortment__item assortment__item--vr"><a href="#">Виртуальная<br>реальность</a></li>
-					<li class="assortment__item assortment__item--monopods"><a href="#">Моноподы<br>для селфи</a></li>
+					<li class="assortment__item assortment__item--monopods"><a href="monopods.html">Моноподы<br>для селфи</a></li>
 					<li class="assortment__item assortment__item--actioncams"><a href="#">Экшн-камеры</a></li>
 					<li class="assortment__item assortment__item--bracelets"><a href="#">Фитнес-браслеты</a></li>
 					<li class="assortment__item assortment__item--clocks"><a href="#">Умные часы</a></li>
@@ -64,6 +66,8 @@
 		</section>
 
 		<!-- Здесь будет слайдер с фичами компании -->
+
+		<div class="banner-2"></div>
 
 		<section class="clients">
 			<h2 class="visually-hidden">Наши клиенты</h2>
@@ -130,7 +134,7 @@
    	<footer class="footer">
    		<div class="wrapper">
 			<div class="footer__top">
-				<div class="logo footer-logo"><img src="img/decorative/logo-device-footer.svg" width="163" height="35" alt="Логотип компании Device"></div>
+				<div class="logo footer-logo"><a href="index.html"><img src="img/decorative/logo-device-footer.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 				<ul class="user-menu footer__user-menu">
 					<li class="user-menu__item user-menu__item--signin"><a href="">Войти</a></li>
 					<li class="user-menu__item user-menu__item--compare"><a href="">Сравнить</a></li>
@@ -165,7 +169,7 @@
 
 
 	<!-- модалки -->
-
+<!-- 
 	<section class="modal modal-feedback" id="modal-feedback">
 		<h3 class="visually-hidden">Форма обратной связи</h3>
 		<div class="modal__wrapper">
@@ -198,7 +202,7 @@
 			<button type="button" class="modal__btn-exit">Закрыть</button>
 			<img src="img/content/map-modal.jpg" width="960" height="559" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15">
 		</div>
-	</section>
+	</section> -->
 
 
 </body>
