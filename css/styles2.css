@@ -47,9 +47,7 @@ ul {
 	list-style: none;
 }
 
-.header a,
-.assortment__list a,
-.delivery__item a {
+.header a{
 	color: #000000;
 }
 
@@ -58,11 +56,28 @@ ul {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.header a:active,
-.assortment__list a:active,
+.header a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.assortment__list a {
+	color: #000000;
+}
+
+.assortment__list a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.delivery__item a {
+	color: #000000;
+}
+
 .delivery__item a:active {
 	color: rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 .user-menu {
 	font-family: OpenSansLight;
@@ -261,22 +276,35 @@ h3 {
 	color: rgba(0, 0, 0, 0.3);
 }
 
+.social a {
+	opacity: 0.3;
+}
+
 .social a:active {
 	opacity: 0.1;
 }
 
-.footer__copyright:hover,
-.footer__copyright:focus,
-.footer-logo:hover,
-.footer-logo:focus,
 .social a:hover,
 .social a:focus {
 	opacity: 0.6;
 }
 
-.footer__copyright:active,
-.footer-logo:active,
-.social a {
+.footer-logo:hover,
+.footer-logo:focus {
+	opacity: 0.6;
+}
+
+.footer-logo:active {
+	opacity: 0.3;
+}
+
+
+.footer__copyright:hover,
+.footer__copyright:focus {
+	opacity: 0.6;
+}
+
+.footer__copyright:active {
 	opacity: 0.3;
 }
 
@@ -386,7 +414,11 @@ ul {
 
 .header-menu-list {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: flex-end;
+
+	/*для выпадашки*/
+	position: relative;
+	
 }
 
 .header-menu-list li {
@@ -396,19 +428,33 @@ ul {
 .header-menu__item--catalog {
 	width: 240px;
 	margin-right: 300px;
+}
+
+
+/*подсмотрел такое оформление у Вадима Макеева 
+в последнем выпуске про чекбоксы, но не уверен в 
+правильности выбора класов для стилизации*/
+.header-menu__item--catalog>a{
+	display: block;
+	width: 100%;
 	position: relative;
 }
 
-.header-menu__item--catalog::before {
+.dropdown__icon {
 	position: absolute;
 	content: "";
 	width: 16px;
-	height: 24px;
-	right: -8px;
+	height: 16px;
 	background-image: url(../img/interface/plus.svg);
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	right: -8px;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.3;
+
 }
+
+
 
 .header-menu__item--contacts {
 	margin-left: auto;
@@ -428,11 +474,12 @@ ul {
 	text-transform: none;
 	font-family: OpenSansLight;
 	font-size: 15px;
-	line-height: 36px;
+
+	/*здесь был лайнхай*/
 	color: #000000;
 	letter-spacing: 0px;
 
-	width: 180px;
+	/*width: 180px;*/
 }
 
 .dropdown__menu {
@@ -443,22 +490,49 @@ ul {
 	padding-right: 560px;
 	box-sizing: border-box;
 	
-	margin-top: 20px;
+	padding-top: 20px;
 
-	height: 130px;
+	height: 150px;
 	width: 1160px;
 	background-color: rgb(247,226,150);
 
+/*	display: none;*/
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	align-content: space-between;
-
-	opacity: 0;
 }
 
+.dropdown__item>a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.dropdown__item {
+	box-sizing: border-box;
+/*	background-color: aqua;*/
+	height: 40px;
+	width: 180px;
+}
+
+
+.dropdown__menu::after {
+	content: "";
+	width: 180px;
+	height: 40px;
+	/*background-color: red;*/
+	order: 0;
+}
+
+
+.dropdown__item--cameras {
+	order: 1;
+}
+/*
  .header-menu__item--catalog:hover .dropdown__menu {
- 	opacity: 1;
+ 	display: flex;
+
  }
 
 .dropdown__item--bracelets {
@@ -482,15 +556,6 @@ ul {
 
 /*Секция ассортимент*/
 
-.assortment__item {
-	font-family: GilroyExtraBold;
-	font-size: 18px;
-	line-height: 24px;
-
-	width: 160px;
-	position: relative;
-}
-
 .assortment {
 	margin-bottom: 84px;
 }
@@ -501,52 +566,70 @@ ul {
 }
 
 
-.assortment__item::before {
-	position: absolute;
-	
-	bottom: calc(100% + 40px);
-	left: 0;
-	content: "";
-	width: 160px;
-	height: 160px;
-	background-color: rgba(247,226,150,0.5);
+.assortment__item {
+	font-family: GilroyExtraBold;
+	font-size: 18px;
+	line-height: 24px;
 
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	width: 160px;
+	height: 240px;
 }
 
-.assortment__item--vr::before {
+.assortment__link {
+	display: block;
+
+	height: inherit;
+}
+
+.assortment__link::before {
+	content: "";
+	display: block;
+	width: 160px;
+	height: 160px;
+	margin-bottom: 40px;
+
+	background-color: rgba(247,226,150,0.5);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.assortment__link--vr::before {
 	background-image: url(../img/main-catalog/popular-1.svg);
 }
 
-.assortment__item--monopods::before {
-
+.assortment__link--monopods::before {
 	background-image: url(../img/main-catalog/popular-2.svg);
-	background-position: 50% 100%;
+	background-position: 50% 95%;
 }
-.assortment__item--actioncams::before {
+
+.assortment__link--actioncams::before {
 	background-image: url(../img/main-catalog/popular-3.svg);
 }
 
-.assortment__item--bracelets::before {
+.assortment__link--bracelets::before {
 	background-image: url(../img/main-catalog/popular-4.svg);
 }
 
-.assortment__item--clocks::before {
+.assortment__link--clocks::before {
 	background-image: url(../img/main-catalog/popular-5.svg);
 }
 
-.assortment__item--copters::before {
+.assortment__link--copters::before {
 	background-image: url(../img/main-catalog/popular-6.svg);
 }
 
-.assortment__item:hover::before {
-	background-color: rgb(247,226,150)
+.assortment__link:hover::before {
+	background-color: rgba(247,226,150,1);
 }
 
-.assortment__item:active::before {
-	filter: opacity(30%);
+.assortment__link:active::before {
+	/*не знаю как описат прозрачность картинки, но не фона*/
 }
+
+
+
+
+
 
 
 
