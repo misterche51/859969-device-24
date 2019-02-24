@@ -48,16 +48,24 @@ a {
 ul {
 	margin: 0;
 	list-style: none;
+	padding-left: 0;
 }
 
 
-
-.delivery__item a {
-	color: #000000;
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
 }
 
-.delivery__item a:active {
-	color: rgba(0, 0, 0, 0.3);
+h1 {
+	font-size: 47px;
+	line-height: 48px;
+	margin: 0;
+}
+
+h3 {
+	margin: 0;
 }
 
 
@@ -78,79 +86,9 @@ ul {
 
 /*для кнопки*/
 
-.filter__submit {
-	width: 200px;
-}
 
 
 
-
-
-h1 {
-	font-size: 47px;
-	line-height: 48px;
-	margin: 0;
-}
-
-
-
-
-
-.top-left__title,
-.top-right__title {
-	text-transform: uppercase;
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 3px;
-}
-
-
-.sorting label {
-	font-family: OpenSansLight;
-	font-size: 14px;
-	line-height: 18px; 
-	opacity: 0.3;
-}
-
-.sorting label:hover {
-	opacity: 0.6;
-}
-
-/*понимаю, что псевдокласс checked 
-здесь не подходит, но как тогда отображаться чекнутый инпут при display none*/
-.sorting input:active,
-.sorting input:checked {
-	opacity: 1;
-}
-
-h3 {
-	margin: 0;
-}
-
-.catalog__item-name {
-	font-size: 18px;
-	line-height: 24px;
-	color: #000000;
-}
-
-.catalog__item-price {
-	font-family: OpenSansLight;
-	font-size: 16px;
-	line-height: 24px;
-}
-
-.catalog__item-campare {
-	font-family: OpenSansLight;
-	font-size: 13px;
-	line-height: 36px;
-}
-
-.filter__color-list,
-.filter__bluetooth-list {
-	font-family: OpenSansLight;
-	font-size: 14px;
-	line-height: 40px;
-}
 
 
 
@@ -165,14 +103,10 @@ h3 {
 
 /*разметка сетки*/
 
-ul {
-	padding-left: 0;
-}
 
 
 .wrapper {
 	width: 1160px;
-	box-sizing: border-box;
 
 	margin-left: auto;
 	margin-right: auto;
@@ -181,23 +115,16 @@ ul {
 
 /*хедэр*/
 
-
-
-
-
-
-
-
-
-
-.header__container {
-	height: 186px;
+.wrapper__inner {
 	padding-left: 60px;
 	padding-right: 60px;
+}
 
-
+.header__container {
 	background-color: rgb(247,226,150);
 	margin-top: 40px;
+
+	padding-bottom: 55px;
 }
 
 .header__logo {
@@ -221,15 +148,82 @@ ul {
 
 
 .header__top {
-	height: 30px;
+	/*height: 30px;*/
 	margin-bottom: 50px;
 
 	display: flex;
 	justify-content: start;
+	align-items: center;
 }
 
 .header__searcher {
 	margin-right: auto;
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+.search__button-lens {
+	position: absolute;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	
+	background-image: url(../img/interface/search.svg);
+}
+
+.search__field {
+	padding-left: 40px; 
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	height: 50px;
+	/*width: 440px;*/
+	
+
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+	color: #000;
+}
+
+.search__field:focus {
+	width: 440px;
+	border-bottom: 1px solid #000;
+}
+
+
+
+
+
+.search__field::placeholder {
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+	color: rgba(0,0,0,0.3);
+}
+
+.header__searcher:hover .search__field::placeholder {
+	color: rgba(0,0,0,0.6);
+}
+
+.search__button-search {
+	font-family: OpenSansLight;
+	font-size: 15px;
+	line-height: 30px;
+	width: 85px;
+	height: 50px;
+	border: 1px solid #000
+}
+
+.search__button-search:hover,
+.search__button-search:last-of-type:focus {
+	background-color: #000;
+	color: #fff;
+}
+
+.header__searcher .search__button-search:active {
+	color: rgba(255,255,255,0.3);
 }
 
 
@@ -254,18 +248,21 @@ ul {
 	font-size: 15px;
 	line-height: 30px;
 	position: relative;
-	margin-left: 27px;
+	padding-left: 27px;
 }
 
 .user-menu__link::before {
 	position: absolute;
 	
-	display: block;
 	content: "";
-	width: 15px;
-	height: 30px;
-	background-repeat: no-repeat;
-	background-position: 50%;
+	width: 13px;
+	height: 12px;
+	left: 0;
+
+	top: 50%;
+	transform: translateY(-50%);
+	background-repeat: no-repeat
+/*	background-position: 50%;*/
 }
 
 .user-menu__link--signin::before {
@@ -355,7 +352,6 @@ ul {
 
 .header-menu__item--catalog .header-menu__link::after {
 	position: absolute;
-	display: inline-block;
 	content: "";
 	width: 24px;
 	height: 16px;
@@ -540,7 +536,7 @@ ul {
 /*блок о компании*/
 
 .about {
-	margin-bottom: 95px;
+	margin-bottom: 75px;
 }
 
 .about__info {
@@ -551,9 +547,10 @@ ul {
 .about__title {
 	font-family: GilroyExtraBold;
 	font-size: 47px;
+	line-height: 48px;
 	color: rgb(0,0,0);
 
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 
 .about__title::before {
@@ -563,7 +560,7 @@ ul {
 	height: 7px;
 	background-color: rgb(0,0,0);
 
-	margin-bottom: 50px;
+	margin-bottom: 45px;
 }
 
 .about__text {
@@ -572,10 +569,7 @@ ul {
 	line-height: 30px;
 	color: #464646;
 
-	margin-bottom: 44px;
-	/*из-за лайн-хай отступ между параграфами и между параграфом
-	 и картой не пиксель в пиксель, 
-	 стоит ли здесь перфектить эту ситуацию?*/
+	margin-bottom: 35px;
 }
 
 .about__column {
@@ -585,8 +579,35 @@ ul {
 }
 
 .about__delivery {
-	margin-top: 90px;
+	margin-top: 60px;
+}
+
+.delivery__link {
+	color: #000000;
+	font-size: 16px;
+	line-height: 40px;
+
 	padding-left: 35px;
+	position: relative;
+}
+
+.delivery__link::before {
+	position: absolute;
+	content: "";
+	width: 4px;
+	height: 4px;
+	border: 2px solid #e5e5e5;
+	border-radius: 50% 50%;
+
+	opacity: 0.3;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.delivery__link:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .about__btn {
@@ -767,21 +788,15 @@ ul {
 
 /*для страницы моноподс*/
 
-
-
 .page-title {
 	margin-top: 44px;
 	margin-bottom: 44px;
-	margin-left: 60px;
 }
-
-
 
 /*Хлебные крошки*/
 
 .breadcrumbs {
 	margin-bottom: 50px;
-	margin-left: 60px;
 }
 
 /*разметка декоративные элементы для хлебных крошек*/
@@ -837,7 +852,6 @@ ul {
 
 .catalog__top-left {
 	box-sizing: border-box;
-	height: 70px;
 	width: 330px;
 	background-color: #d9d9d9;
 	position: relative;
@@ -848,10 +862,13 @@ ul {
 	top: 50%;
 	transform: translateY(-50%);
 	margin-left: 60px;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 3px;
 }
 
 .catalog__top-right {
-	box-sizing: border-box;
 	height: 70px;
 	width: 830px;
 	background-color: #ebebeb;
@@ -864,6 +881,10 @@ ul {
 .top-right__title {
 	display: inline-block;
 	width: 160px;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 3px;
 }
 
 .catalog__sorting {
@@ -878,6 +899,14 @@ ul {
 }
 
 
+.criterion__name {
+	margin-right: 32px;
+}
+
+.criterion__name:last-child {
+	margin-right: 0;
+}
+
 
 .sorting__direction {
 	margin-left: auto;
@@ -887,11 +916,122 @@ ul {
 	margin-left: 18px;
 }
 
-fieldset {
-	border: none;
-	margin: 0;
-	padding: 0;
+
+
+.filter__submit {
+	width: 200px;
 }
+
+
+
+
+.sorting label {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 18px; 
+	opacity: 0.3;
+}
+
+.sorting label:hover {
+	opacity: 0.6;
+}
+
+/*понимаю, что псевдокласс checked 
+здесь не подходит, но как тогда отображаться чекнутый инпут при display none*/
+.sorting input:active ,
+.sorting input:checked  {
+	opacity: 1;
+}
+
+
+
+
+
+.filter__color-list,
+.filter__bluetooth-list {
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+
+
+
+
+/*описываю чекбоксы*/
+
+.checkbox-label {
+	position: relative;
+	padding-left: 39px;
+	cursor: pointer;
+}
+
+.filter__input--checkbox + .checkbox-indicator {
+	position: absolute;
+	content: "";
+	width: 25px;
+	height: 23px;
+	left: -1px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url(../img/interface/checkbox-off.svg);
+	background-repeat: no-repeat;
+}
+
+.filter__input--checkbox:hover + .checkbox-indicator {
+	opacity: 0.6;
+}
+
+.filter__input--checkbox:checked + .checkbox-indicator,
+.filter__input--checkbox:active + .checkbox-indicator {
+	background-image: url(../img/interface/checkbox-on.svg);
+}
+
+.filter__input--checkbox:active + .checkbox-indicator {
+	opacity: 1;
+}
+
+.filter__input--checkbox:disabled + .checkbox-indicator {
+	opacity: 0.3;
+}
+
+
+.radio-label {
+	position: relative;
+	padding-left: 39px;
+	cursor: pointer;
+}
+
+.filter__input--radio + .radio-indicator {
+	position: absolute;
+	content: "";
+	width: 26px;
+	height: 26px;
+	left: -1px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url(../img/interface/radio-off.svg);
+	background-repeat: no-repeat;
+}
+
+.filter__input--radio:hover + .radio-indicator {
+	opacity: 0.6;
+}
+
+.filter__input--radio:checked + .radio-indicator,
+.filter__input--radio:active + .radio-indicator {
+	background-image: url(../img/interface/radio-on.svg);
+}
+
+.filter__input--radio:active + .radio-indicator {
+	opacity: 1;
+}
+
+
+.filter__input--radio:disabled + .radio-indicator {
+	opacity: 0.3;
+}
+
 
 
 
@@ -901,15 +1041,14 @@ fieldset {
 	background: linear-gradient(to right, #eee 0%,#eee 50%,#fff 50%,#fff 100%);
 }
 
-
-
-
 .catalog__filter {
 	padding: 70px;
 	padding-left: 60px;
 	width: 330px;
 	order: 0;
 }
+
+
 
 
 .filter__legend {
@@ -922,6 +1061,8 @@ fieldset {
 .filter__fieldset {
 	margin-bottom: 40px;
 }
+
+
 
 
 
@@ -974,6 +1115,23 @@ fieldset {
 	width: 260px;
 }
 
+.catalog__item-name {
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.catalog__item-price {
+	font-family: OpenSansLight;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.catalog__item-campare {
+	font-family: OpenSansLight;
+	font-size: 13px;
+	line-height: 36px;
+}
 
 
 
@@ -1138,4 +1296,122 @@ button {
 .btn:hover::after {
 	height: 100%;
 	transition: all ease-in-out 0.3s;
+}
+
+
+
+
+
+.modal {
+	z-index: 5;
+	box-shadow: 0 0 30px rgba(0,0,0,0.5);
+	
+	/*display: none;*/
+}
+
+.modal__btn-exit {
+	position: absolute;
+	content: "";
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background-color: rgba(247,226,150,0.5);
+	font-size: 0;
+	right: 22px;
+	top: 22px;
+}
+
+.modal__btn-exit::before,
+.modal__btn-exit::after {
+	position: absolute;
+	
+	content: "";
+	width: 25px;
+	height: 2px;
+	background-color: rgb(255,255,255);
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15px;
+}
+
+.modal__btn-exit::before {
+	transform: rotate(45deg);
+}
+
+.modal__btn-exit::after {
+	transform: rotate(-45deg);
+}
+
+.modal__btn-exit:hover {
+	background-color: rgb(247,226,150);
+}
+
+.modal__btn-exit:active {
+	background-color: rgba(247,226,150,0.3);
+}
+
+.modal-feedback {
+
+
+	position: fixed;
+	background-color: white;
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 100px;
+	padding-top: 95px;
+	padding-right: 100px;
+	padding-bottom: 70px;
+}
+
+.userinfo__wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 35px;
+}
+
+.form__field-title {
+	display: block;
+	margin-bottom: 7px;
+}
+
+.form__field {
+	border: 0;
+	width: 360px;
+	height: 50px;
+	background-color: rgba(4, 6, 6, 0.2);
+	color: rgba(70, 70, 70, 0.4);
+	font-family: OpenSansLight;
+	font-size: 14px;
+	line-height: 18px;
+	padding-left: 20px;
+}
+
+.form__field--usermessage {
+	width: 100%;
+	min-height: 155px;
+	padding-left: 20px;
+	padding-top: 18px;
+}
+
+.form__usermessage {
+	margin-bottom: 40px;
+}
+
+.modal__form-btn {
+	width: 200px;
+}
+
+
+.modal__map {
+	position: absolute;
+
+	width: 960px;
+	height: 560px;
+	left: 50%;
+	margin-left: -480px;
+	top: 1800px;
+	padding: 0
 }

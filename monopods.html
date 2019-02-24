@@ -9,40 +9,40 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="header__container">
-				<div class="logo header__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
+				<div class="wrapper__inner">
+					<div class="logo header__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 
-				<div class="header__top">
-					<form class="header__searcher" action="https://echo.htmlacademy.ru/" method="get">
-						<label for="header-searcher" class="visually-hidden">Введите текст запроса</label>
-						<button type="submit" aria-label="Поиск по сайту">
-							<img src="img/interface/search.svg">
-						</button>
-						<input type="search" id="header-searcher" name="header-searcher" placeholder="Поиск по сайту">
-					</form>
+					<div class="header__top">
+						<form class="header__searcher search" action="https://echo.htmlacademy.ru/" method="get">
+							<label for="header-searcher" class="visually-hidden search__label">Введите текст запроса</label>
+							<button class="search__button-lens" type="submit" aria-label="Поиск по сайту"></button>
+							<input class="search__field" type="search" id="header-searcher" name="header-searcher" placeholder="Поиск по сайту"><button class="search__button-search" type="submit" aria-label="Поиск по сайту">Найти</button>
+						</form>
 
-					<ul class="header__user-menu user-menu">
-						<li class="user-menu__item user-menu__item--signin"><a class="user-menu__link user-menu__link--signin" href="login.html">Войти</a></li>
-						<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
-						<li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
-					</ul>		
-				</div>
+						<ul class="header__user-menu user-menu">
+							<li class="user-menu__item user-menu__item--signin"><a class="user-menu__link user-menu__link--signin" href="login.html">Войти</a></li>
+							<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
+							<li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
+						</ul>		
+					</div>
 
-				<div class="header-menu">
-					<ul class="header-menu-list">
-						<li class="header-menu__item header-menu__item--catalog dropdown"><a class="header-menu__link" href="">Каталог товаров</a>
-							<ul class="dropdown__menu">
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Виртуальная реальность</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Фитнес-браслеты</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Квадрокоптеры</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="monopods.html">Моноподы для селфи</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Умные часы</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Экшн-камеры</a></li>
-							</ul>
-						</li>
-						<li class="header-menu__item header-menu__item--delivery"><a class="header-menu__link" href="">Доставка</a></li>
-						<li class="header-menu__item header-menu__item--warranty"><a class="header-menu__link" href="">Гарантии</a></li>
-						<li class="header-menu__item header-menu__item--contacts"><a class="header-menu__link" href="">Контакты</a></li>		
-					</ul>
+					<div class="header-menu">
+						<ul class="header-menu-list">
+							<li class="header-menu__item header-menu__item--catalog dropdown"><a class="header-menu__link" href="">Каталог товаров</a>
+								<ul class="dropdown__menu">
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Виртуальная реальность</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Фитнес-браслеты</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Квадрокоптеры</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="monopods.html">Моноподы для селфи</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Умные часы</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Экшн-камеры</a></li>
+								</ul>
+							</li>
+							<li class="header-menu__item header-menu__item--delivery"><a class="header-menu__link" href="">Доставка</a></li>
+							<li class="header-menu__item header-menu__item--warranty"><a class="header-menu__link" href="">Гарантии</a></li>
+							<li class="header-menu__item header-menu__item--contacts"><a class="header-menu__link" href="">Контакты</a></li>		
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -50,15 +50,15 @@
 
     <main class="page-catalog">
     	<div class="wrapper">
-    		<h1 class="page-title">Моноподы для селфи</h1>
-			<ul class="breadcrumbs">
-			    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li
-			    ><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li
-			    ><li class="breadcrumbs__item breadcrumbs__current">Моноподы для селфи</li>
-		      </ul>    			
+    		<div class="wrapper__inner">
+    			<h1 class="page-title">Моноподы для селфи</h1>
+				<ul class="breadcrumbs">
+				    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li
+				    ><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li
+				    ><li class="breadcrumbs__item breadcrumbs__current">Моноподы для селфи</li>
+			      </ul>  
+    		</div>    		  			
     	</div>
-	      	
-      	</div>
 	   	<div class="catalog">
 	   		<div class="catalog__top">
 	   			<div class="wrapper">
@@ -154,6 +154,8 @@
 						        <li class="pagination__nav pagination__nav--forward"><a class="pagination__link pagination__link--nav" href="#">Вперед</a></li> 
 				        	</ul>		
 		   				</div>
+
+
 		   				<aside class="catalog__filter">
 		   					<form class="filter">
 		   						<fieldset class="filter__fieldset">
@@ -164,10 +166,46 @@
 		   						<fieldset class="filter__fieldset">
 		   							<legend class="filter__legend">Цвет</legend>
 		   							<ul class="filter__color-list">
-		   								<li><input type="checkbox" class="filter__input filter__input--checkbox" name="black" id="filter-color-black">
-		   									<label for="filter-color-black">Черный</label>
+		   								<li>
+		   									<label class="checkbox-label">
+		   										<input type="checkbox" class="visually-hidden filter__input filter__input--checkbox" name="black" id="filter-color-black">
+		   										<span class="checkbox-indicator"></span>
+		   										Черный</label>
 		   								</li>
-		   								<li><input type="checkbox" class="filter__input filter__input--checkbox" name="white" id="filter-color-white">
+
+		   								<li>
+		   									<label class="checkbox-label">
+		   									<input type="checkbox" class="visually-hidden filter__input filter__input--checkbox" name="black" id="filter-color-black">
+		   									<span class="checkbox-indicator"></span>
+		   									Белый</label>
+		   								</li>
+
+		   								<li>
+		   									<label class="checkbox-label">
+		   									<input type="checkbox" class="visually-hidden filter__input filter__input--checkbox" name="blue" id="filter-color-blue" checked>
+		   									<span class="checkbox-indicator"></span>
+		   									Синий</label>
+		   								</li>
+
+		   								<li>
+		   									<label class="checkbox-label">
+		   									<input type="checkbox" class="visually-hidden filter__input filter__input--checkbox" name="red" id="filter-color-red" checked disabled>
+		   									<span class="checkbox-indicator" ></span>
+		   									Красный</label>
+		   								</li>
+
+		   								<li>
+		   									<label class="checkbox-label">
+		   									<input type="checkbox" class="visually-hidden filter__input filter__input--checkbox" name="pink" id="filter-color-pink">
+		   									<span class="checkbox-indicator"></span>
+		   									Розовый</label>
+		   								</li>
+
+
+
+
+		   								
+		   								<!-- <li><input type="checkbox" class="filter__input filter__input--checkbox" name="white" id="filter-color-white">
 		   									<label for="filter-color-white">Белый</label>
 		   								</li>
 		   								<li><input type="checkbox" class="filter__input filter__input--checkbox" name="blue"id="filter-color-blue">
@@ -178,17 +216,34 @@
 		   								</li>
 		   								<li><input type="checkbox" class="filter__input filter__input--checkbox" name="pink" id="filter-color-pink">
 		   									<label for="filter-color-pink">Розовый</label>
-		   								</li>
+		   								</li> -->
 		   							</ul>
 		   						</fieldset>
 		   						<fieldset class="filter__fieldset">
 		   							<legend class="filter__legend">Bluetooth</legend>
 		   								<ul class="filter__bluetooth-list">
-		   									<li><input type="radio" class="filter__input filter__input--radio"	id="bluetooth-yes" name="bluetooth" value="bluetooth-yes">
-		   										<label for="bluetooth-yes">Есть</label>
+		   									<li>
+		   										<label class="radio-label">
+		   										<input type="radio" class="filter__input filter__input--radio visually-hidden"	id="bluetooth-yes" name="bluetooth" value="bluetooth-yes">
+		   										<span class="radio-indicator"></span>
+		   										Есть</label>
+
+
+
+
+
+		   										<!-- <input type="radio" class="filter__input filter__input--radio"	id="bluetooth-yes" name="bluetooth" value="bluetooth-yes">
+		   										<label for="bluetooth-yes">Есть</label> -->
 		   									</li>
-		   									<li><input type="radio" lass="filter__input filter__input--radio" id="bluetooth-no" name="bluetooth" value="bluetooth-no">
-		   										<label for="bluetooth-no">Нет</label>
+		   									<li>
+		   										<label class="radio-label">
+		   										<input type="radio" class="filter__input filter__input--radio visually-hidden" id="bluetooth-no" name="bluetooth" value="bluetooth-no" disabled>
+		   										<span class="radio-indicator"></span>
+		   										Нет</label>
+
+
+		   										<!-- <input type="radio" lass="filter__input filter__input--radio" id="bluetooth-no" name="bluetooth" value="bluetooth-no">
+		   										<label for="bluetooth-no">Нет</label> -->
 		   									</li>
 		   								</ul>
 		   						</fieldset>

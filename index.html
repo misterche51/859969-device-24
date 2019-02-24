@@ -9,40 +9,40 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="header__container">
-				<div class="logo header__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
+				<div class="wrapper__inner">
+					<div class="logo header__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 
-				<div class="header__top">
-					<form class="header__searcher" action="https://echo.htmlacademy.ru/" method="get">
-						<label for="header-searcher" class="visually-hidden">Введите текст запроса</label>
-						<button type="submit" aria-label="Поиск по сайту">
-							<img src="img/interface/search.svg">
-						</button>
-						<input type="search" id="header-searcher" name="header-searcher" placeholder="Поиск по сайту">
-					</form>
+					<div class="header__top">
+						<form class="header__searcher search" action="https://echo.htmlacademy.ru/" method="get">
+							<label for="header-searcher" class="visually-hidden search__label">Введите текст запроса</label>
+							<button class="search__button-lens" type="submit" aria-label="Поиск по сайту"></button>
+							<input class="search__field" type="search" id="header-searcher" name="header-searcher" placeholder="Поиск по сайту"><button class="search__button-search" type="submit" aria-label="Поиск по сайту">Найти</button>
+						</form>
 
-					<ul class="header__user-menu user-menu">
-						<li class="user-menu__item user-menu__item--signin"><a class="user-menu__link user-menu__link--signin" href="login.html">Войти</a></li>
-						<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
-						<li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
-					</ul>		
-				</div>
+						<ul class="header__user-menu user-menu">
+							<li class="user-menu__item user-menu__item--signin"><a class="user-menu__link user-menu__link--signin" href="login.html">Войти</a></li>
+							<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
+							<li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
+						</ul>		
+					</div>
 
-				<div class="header-menu">
-					<ul class="header-menu-list">
-						<li class="header-menu__item header-menu__item--catalog dropdown"><a class="header-menu__link" href="">Каталог товаров</a>
-							<ul class="dropdown__menu">
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Виртуальная реальность</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Фитнес-браслеты</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Квадрокоптеры</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="monopods.html">Моноподы для селфи</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Умные часы</a></li>
-								<li class="dropdown__item"><a class="dropdown__link" href="#">Экшн-камеры</a></li>
-							</ul>
-						</li>
-						<li class="header-menu__item header-menu__item--delivery"><a class="header-menu__link" href="">Доставка</a></li>
-						<li class="header-menu__item header-menu__item--warranty"><a class="header-menu__link" href="">Гарантии</a></li>
-						<li class="header-menu__item header-menu__item--contacts"><a class="header-menu__link" href="">Контакты</a></li>		
-					</ul>
+					<div class="header-menu">
+						<ul class="header-menu-list">
+							<li class="header-menu__item header-menu__item--catalog dropdown"><a class="header-menu__link" href="">Каталог товаров</a>
+								<ul class="dropdown__menu">
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Виртуальная реальность</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Фитнес-браслеты</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Квадрокоптеры</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="monopods.html">Моноподы для селфи</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Умные часы</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="#">Экшн-камеры</a></li>
+								</ul>
+							</li>
+							<li class="header-menu__item header-menu__item--delivery"><a class="header-menu__link" href="">Доставка</a></li>
+							<li class="header-menu__item header-menu__item--warranty"><a class="header-menu__link" href="">Гарантии</a></li>
+							<li class="header-menu__item header-menu__item--contacts"><a class="header-menu__link" href="">Контакты</a></li>		
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -111,9 +111,9 @@
 						<p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки</br> России! DEVICE работает со многими транспортными компаниями:</p>
 
 						<ul class="about__delivery delivery">
-							<li class="delivery__item"><a href="https://www.dellin.ru/">Деловые линии</a></li>
-							<li class="delivery__item"><a href="ae5000.ru/">Автотрединг</a></li>
-							<li class="delivery__item"><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
+							<li class="delivery__item"><a class="delivery__link"  href="https://www.dellin.ru/">Деловые линии</a></li>
+							<li class="delivery__item"><a class="delivery__link" href="ae5000.ru/">Автотрединг</a></li>
+							<li class="delivery__item"><a class="delivery__link"  href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
 						</ul>
 						<a href="" class="about__btn btn">Подробнее о нас</a>
 					</section>
@@ -171,22 +171,26 @@
 
 
 	<!-- модалки -->
-<!-- 
+
 	<section class="modal modal-feedback" id="modal-feedback">
 		<h3 class="visually-hidden">Форма обратной связи</h3>
-		<div class="modal__wrapper">
 			<button type="button" class="modal__btn-exit">Закрыть</button>
 			<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
 				<fieldset class="form__userinfo">
-					<legend class="visually-hidden">Данные о пользователе</legend>
-					<div class="form__userinfo-item">
+					<div class="userinfo__wrapper">
+						<legend class="visually-hidden">Данные о пользователе</legend>
+						<div class="form__userinfo-item">
 						<label for="username" class="form__field-title">Ваше имя:</label>
 						<input type="text" name="username" id="username" class="form__field form__field--username" placeholder="Имя Фамилия">
-					</div>
-					<div class="form__userinfo-item">
+						
+						</div>
+						<div class="form__userinfo-item">
 						<label for="usermail" class="form__field-title ">Ваш email:</label>
 						<input type="email" name="usermail" id="usermail" class="form__field form__field--usermail" placeholder="email@example.com">
+						
+						</div>
 					</div>
+					
 				</fieldset>
 				<fieldset class="form__usermessage">
 					<legend class="visually-hidden">Что вас интересует?</legend>
@@ -195,16 +199,13 @@
 				</fieldset>
 				<button type="submit" class="modal__form-btn btn">Отправить</button>			
 			</form>
-		</div>
 	</section>
 
-	<section class="modal modal-map" id="modal-map">
+	<section class="modal modal__map map" id="modal-map">
 		<h3 class="visually-hidden">Как до нас добраться</h3>
-		<div class="modal__wrapper">
 			<button type="button" class="modal__btn-exit">Закрыть</button>
-			<img src="img/content/map-modal.jpg" width="960" height="559" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15">
-		</div>
-	</section> -->
+			<img class="map__img" src="img/content/map-modal.png" width="960" height="560" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15">
+	</section>
 
 
 </body>
