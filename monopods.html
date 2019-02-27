@@ -101,10 +101,13 @@
 		   					<ul class="catalog__list">
 							    <li class="catalog__item">
 					            	<div class="catalog__item-image">
-					            		<button type="button" class="catalog__item-page btn">В корзину</button>
-					            		<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
 					                	<img src="img/content/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-					              	</div>
+					                 </div>
+					              	 <div class="catalog__item-image--hovered">
+						               	<button type="button" class="catalog__item-cart btn">В корзину</button>
+						            	<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+					               	</div>	
+					              
 					            	<div class="catalog__item-info">
 					                	<h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Любительская селфи-палка</a></h3>
 					               		<span class="catalog__item-price">500 руб.</span> 
@@ -113,31 +116,41 @@
 
 					          	<li class="catalog__item">
 					            	<div class="catalog__item-image">
-					            		<button type="button" class="catalog__item-page btn">В корзину</button>
-					            		<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
-					                	<img src="img/content/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+					            		<img src="img/content/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+					            		
 					              	</div>
-					            	<div class="catalog__item-info">				                	
-										<h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Профессиональная селфи-палка</a></h3>     
-					               		<span class="catalog__item-price">1 500 руб.</span> 
+					              <div class="catalog__item-image--hovered">
+					               			<button type="button" class="catalog__item-cart btn">В корзину</button>
+					            			<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+					               		</div>
+					            	<div class="catalog__item-info">
+					            		<h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Профессиональная селфи-палка</a></h3>
+					            		<span class="catalog__item-price">1 500 руб.</span> 
 					            	</div>
 					          	</li>
+
 					          	<li class="catalog__item">
 					          		<div class="catalog__item-image">
-					          			<button type="button" class="catalog__item-page btn">В корзину</button>
-					            		<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
-					                	<img src="img/content/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+					          			<img src="img/content/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+					          			
 					               	</div>
+					            	<div class="catalog__item-image--hovered">
+						               		<button type="button" class="catalog__item-cart btn">В корзину</button>
+						            		<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+					               		</div>
 					            	<div class="catalog__item-info">
-						               <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Непотопляемая селфи-палка</a></h3>              
+						               <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Непотопляемая селфи-палка</a></h3>
 						               <span class="catalog__item-price">2 500 руб.</span> 
 					           		</div>
 					          	</li>
-					          	<li class="catalog__item">
-					             	<div class="catalog__item-image">
-					             		<button type="button" class="catalog__item-page btn">В корзину</button>
+					          	<li class="catalog__item catalog__item--new">				     
+					               	<div class="catalog__item-image ">
+					               		<img src="img/content/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+					               	</div>
+
+					               	<div class="catalog__item-image--hovered">
+					               		<button type="button" class="catalog__item-cart btn">В корзину</button>
 					            		<button type="button" class="catalog__item-campare">Добавить к сравнению</button>
-					                	<img src="img/content/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
 					               	</div>
 						            <div class="catalog__item-info">
 						                <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Селфи-палка «Следуй за мной»</a></h3>
@@ -160,8 +173,30 @@
 		   					<form class="filter">
 		   						<fieldset class="filter__fieldset">
 		   							<legend class="filter__legend" >Стоимость</legend>
-		   								<label for="filter-price"  class="visually-hidden">Стоимость</label>
-		   								<input type="range" min="0" max="8000" id="filter-price">
+		   								<!-- <label for="filter-price"  class="visually-hidden">Стоимость</label>
+		   								<input type="range" min="0" max="8000" id="filter-price"> -->
+
+
+
+		   						 <div class="filter__price-control range">
+		   							<div class="range__scale scale">
+        								<div class="scale__bar"></div>
+        								<div class="range__controls controls">
+											<div class="controls__toggle controls__toggle--min"></div>
+	       							   	 	<div class="controls__toggle controls__toggle--max"></div>
+										</div>
+        							</div>
+
+		   							
+        							<label class="range__price range__price--min price">от <input class="price__value" type="text" name="min-price" value="0"></label>
+        							<label class="range__price range__price--max price">до <input class="price__value" type="text" name="max-price" value="5000"></label>
+								</div>
+									      
+
+
+
+
+
 		   						</fieldset>
 		   						<fieldset class="filter__fieldset">
 		   							<legend class="filter__legend">Цвет</legend>
@@ -190,7 +225,7 @@
 		   								<li>
 		   									<label class="checkbox-label">
 		   									<input type="checkbox" class="visually-hidden filter__input filter__input--checkbox" name="red" id="filter-color-red" checked disabled>
-		   									<span class="checkbox-indicator" ></span>
+		   									<span class="checkbox-indicator"></span>
 		   									Красный</label>
 		   								</li>
 
