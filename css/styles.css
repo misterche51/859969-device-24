@@ -148,9 +148,7 @@ h3 {
 
 
 .header__top {
-	/*height: 30px;*/
 	margin-bottom: 50px;
-
 	display: flex;
 	justify-content: start;
 	align-items: center;
@@ -159,12 +157,15 @@ h3 {
 .header__searcher {
 	margin-right: auto;
 	display: flex;
-	position: relative;
 	align-items: center;
+	width: 440px;
+	position: relative;
 }
 
-.search__button-lens {
+.header__searcher::before {
 	position: absolute;
+	
+	content: "";
 	left: 2px;
 	width: 16px;
 	height: 16px;
@@ -172,9 +173,12 @@ h3 {
 	background-image: url(../img/interface/search.svg);
 }
 
+
 .search__field {
+	width: 100%;
 	padding-left: 40px; 
-	border: 0;
+	border: none;
+	border-bottom: 2px solid transparent;
 	outline: none;
 	background-color: transparent;
 	height: 50px;
@@ -183,15 +187,11 @@ h3 {
 	font-size: 15px;
 	line-height: 30px;
 	color: #000;
-
 }
 
-.search__field:focus,
-.search__button-search:active ~ .search__field {
-	width: 440px;
-	border-bottom: 1px solid #000;
+.search__field:focus {
+	border-bottom-color: #000;
 }
-
 
 .search__field::placeholder {
 	font-family: OpenSansLight;
@@ -204,27 +204,35 @@ h3 {
 	color: rgba(0,0,0,0.6);
 }
 
+.search__field:focus ~ .search__button-search {
+	display: block;
+}
+
 .search__button-search {
 	font-family: OpenSansLight;
 	font-size: 15px;
 	line-height: 30px;
-	width: 85px;
+/*	width: 85px;*/
 	height: 50px;
-	border: 1px solid #000;
 
-	position: absolute;
-	top: 0;
-	right: -85px;
+	padding-left: 21px;
+	padding-right: 21px;
+
+	border: 2px solid #000;
+	margin-left: auto;
+
+	display: none;
 }
 
 .search__button-search:hover,
-.search__button-search:last-of-type:focus {
+.search__button-search:focus {
 	background-color: #000;
 	color: #fff;
 }
 
-.header__searcher .search__button-search:active {
+.search__button-search:active {
 	color: rgba(255,255,255,0.3);
+	display: block;
 }
 
 
@@ -1253,7 +1261,9 @@ h3 {
 }
 
 .filter__input:disabled + .filter__label,
-.filter__input:disabled + .filter__label::before {
+.filter__input:disabled + .filter__label::before,
+.filter__input:disabled:active + .filter__label,
+.filter__input:disabled:active + .filter__label::before {
 	opacity: 0.3;
 }
 
