@@ -2,8 +2,25 @@
 <html lang="ru">
 <head>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
 	<meta charset="utf-8">
 	<title>Магазин гаджетов DEVICE</title>
+
+ <script src="https://api-maps.yandex.ru/2.1/?apikey=e65a5941-ff7f-4ba8-8c4b-619608518509&lang=ru_RU" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+   ymaps.ready(init);
+    function init(){     
+        var myMap = new ymaps.Map("modal-map", {
+            center: [55.686980, 37.529654],
+            zoom: 14,
+            controls: []
+        });
+
+    }
+</script>
 </head>
 <body>
 <header class="header">
@@ -236,7 +253,7 @@
 			  <h3 class="about__title">Контакты</h3>
 			  <p class="about__text">Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работоспособность покуки. Всякое бывает.</p>
 				<img class="about__map" src="img/content/map.jpg" alt="Как до нас добраться">
-			  <button type="button" class="about__btn btn">Напишите нам</button>
+			  <button type="button" class="about__btn btn about__btn--popup">Напишите нам</button>
 			</section>					
 		  </div>				
 		</div>
@@ -294,7 +311,7 @@
    	</div>
   </div>
 </footer>
-	<section class="modal modal-feedback" id="modal-feedback">
+	<section class="modal modal__feedback" id="modal-feedback">
 	  <h3 class="visually-hidden">Форма обратной связи</h3>
 	  <button type="button" class="modal__btn-exit">Закрыть</button>
 		<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
@@ -323,7 +340,13 @@
 	<section class="modal modal__map map" id="modal-map">
 	  <h3 class="visually-hidden">Как до нас добраться</h3>
 		<button type="button" class="modal__btn-exit">Закрыть</button>
-		  <img class="map__img" src="img/content/map-modal.png" width="960" height="560" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15">
+		  <!-- <img class="map__img" src="img/content/map-modal.png" width="960" height="560" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15"> -->
 	</section>
+
+
+
+<script src="js/device.js"></script>
+
+
 </body>
 </html>
