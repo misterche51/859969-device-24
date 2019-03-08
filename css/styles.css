@@ -1811,9 +1811,23 @@ button {
 	height: 560px;
 }
 
-.modal-show {
+.modal--show {
 	display: block;
 	animation: fadeIn 0.8s;
+}
+
+.modal--close {
+	display: none;
+}
+
+.field-invalid {
+	background-color: #f6dada;
+	box-shadow: none;
+	animation: pulse 0.6s;
+}
+
+.modal--error {
+	animation: shake 0.6s;
 }
 
 
@@ -1866,21 +1880,6 @@ button {
 		opacity: 1;
 	}
 
-}
-
-
-.modal-close {
-	display: none;
-}
-
-.field-invalided {
-	background-color: #f6dada;
-	box-shadow: none;
-	animation: pulse 0.6s;
-}
-
-.modal-shake {
-	animation: shake 0.6s;
 }
 
 

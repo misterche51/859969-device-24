@@ -7,20 +7,6 @@
 	<meta charset="utf-8">
 	<title>Магазин гаджетов DEVICE</title>
 
- <script src="https://api-maps.yandex.ru/2.1/?apikey=e65a5941-ff7f-4ba8-8c4b-619608518509&lang=ru_RU" type="text/javascript">
-</script>
-
-<script type="text/javascript">
-   ymaps.ready(init);
-    function init(){     
-        var myMap = new ymaps.Map("modal-map", {
-            center: [55.686980, 37.529654],
-            zoom: 14,
-            controls: []
-        });
-
-    }
-</script>
 </head>
 <body>
 <header class="header">
@@ -313,25 +299,25 @@
 </footer>
 	<section class="modal modal__feedback" id="modal-feedback">
 	  <h3 class="visually-hidden">Форма обратной связи</h3>
-	  <button type="button" class="modal__btn-exit">Закрыть</button>
+	  <button type="button" class="modal__btn-exit" tabindex="0">Закрыть</button>
 		<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
 		  <fieldset class="form__userinfo">
 			<div class="userinfo__wrapper">
 			  <legend class="visually-hidden">Данные о пользователе</legend>
 			  <div class="form__userinfo-item">
 				<label for="username" class="form__field-title">Ваше имя:</label>
-				  <input type="text" name="username" id="username" class="form__field form__field--username" placeholder="Имя Фамилия">						
+				  <input type="text" name="username" id="username" class="form__field form__field--username" placeholder="Имя Фамилия" tabindex="0">						
 			  </div>
 			  <div class="form__userinfo-item">
 				<label for="usermail" class="form__field-title ">Ваш email:</label>
-				<input type="email" name="usermail" id="usermail" class="form__field form__field--usermail" placeholder="email@example.com">
+				<input type="email" name="usermail" id="usermail" class="form__field form__field--usermail" placeholder="email@example.com" tabindex="0">
 			  </div>
 			</div>					
 		  </fieldset>
 		  <fieldset class="form__usermessage">
 			<legend class="visually-hidden">Что вас интересует?</legend>
 			 <label for="usermessage" class="form__field-title">Текст письма:</label>
-				<textarea name="usermessage" id="usermessage"  class="form__field form__field--usermessage" cols="100" rows="10" placeholder="В свободной форме"></textarea>
+				<textarea name="usermessage" id="usermessage"  class="form__field form__field--usermessage" cols="100" rows="10" placeholder="В свободной форме" tabindex="0"></textarea>
 		  </fieldset>
 		  <button type="submit" class="modal__form-btn btn">Отправить</button>			
 		</form>
@@ -339,13 +325,13 @@
 	<section class="modal modal__map map" id="modal-map">
 	  <h3 class="visually-hidden">Как до нас добраться</h3>
 		<button type="button" class="modal__btn-exit">Закрыть</button>
-		  <!-- <img class="map__img" src="img/content/map-modal.png" width="960" height="560" alt="Офис компании находится по адресу: г.Москва ул.Строителей д.15"> -->
 	</section>
 
 
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e65a5941-ff7f-4ba8-8c4b-619608518509&lang=ru_RU" type="text/javascript">
+</script>
 
 <script src="js/device.js"></script>
-
 
 </body>
 </html>
