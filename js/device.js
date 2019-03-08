@@ -9,33 +9,69 @@
 	var feedbackUsermail = popup.querySelector(".form__field--usermail");
 	var feedbackUsermessage = popup.querySelector(".form__field--usermessage");
 	var isStorageSupport = true;
-  var storage = "";
-  var storageMail = "";
+  var storage = {
+      name: "",
+      email: ""
+  };
 
 
   try {
-    storage = localStorage.getItem("feedbackUsername");
-    storageMail = localStorage.getItem("feedbackUsermail");
-  } catch (err) {
-    isStorageSupport = false;
-  }
+    storage.name = localStorage.getItem("feedbackUsername");
+    storage.email = localStorage.getItem("feedbackUsermail");
+    } catch (err) {
+      isStorageSupport = false;
+    }
  	
 
-  moreInfo.addEventListener("click", function (evt) {
-  	evt.preventDefault();
-  	popup.classList.add("modal-show");
-  	feedbackUsername.focus();
-    
-    if (storage) {
-      feedbackUsername.value = storage;
-      feedbackUsermail.focus(); 
-    // } else if (storageMail) {
-    //     feedbackUsermail.value = storageMail;
-    //     feedbackUsermessage.focus();
+  moreInfo.addEventListener("click", onPopupShow);
+  buttonExit.addEventListener("click", onPopupClose);
+
+
+  function onPopupShow (evt) {
+    evt.preventDefault();
+     popup.classList.add("modal-show");
+    if (isStorageSupport) {
+       storage.name = localStorage.getItem("feedbackUsername");
+       storage.email = localStorage.getItem("feedbackUsermail");
+
+      if (storage.name) {
+        feedbackUsername.value = storage.name;
+
+        if (storage.email) {
+          feedbackUsermail.value = storage.email;
+          feedbackUsermessage.focus();
+        } else {
+          feedbackUsermail.focus();
+        }
+      } else {
+        feedbackUsername.focus();
+      }
     } else {
       feedbackUsername.focus();
     }
-   });
+   
+    window.addEventListener("keydown", onPopupEscapePress);
+  }
+
+  function onPopupClose (evt) {
+   evt.preventDefault();
+    popup.classList.remove("modal-show","modal-shake");
+    if (isStorageSupport) {
+       localStorage.setItem("feedbackUsername", feedbackUsername.value);
+       localStorage.setItem("feedbackUsermail", feedbackUsermail.value);
+    }
+    feedbackUsername.classList.remove("field-invalided");
+    feedbackUsermail.classList.remove("field-invalided");
+    feedbackUsermessage.classList.remove("field-invalided");
+ }
+
+  function onPopupEscapePress (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      onPopupClose();
+      window.removeEventListener("keydown", onPopupEscapePress);
+    }
+  }
 
 
 
@@ -59,82 +95,51 @@
 });
 
 
-   	buttonExit.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-   
-    feedbackUsername.classList.remove("field-invalided");
-    feedbackUsermail.classList.remove("field-invalided");
-    feedbackUsermessage.classList.remove("field-invalided");
-    popup.classList.remove("modal-shake");
- });
 
-    form.addEventListener("submit", function (evt) {
-     if (!feedbackUsername.value) {
-     	evt.preventDefault();
-     	feedbackUsername.classList.remove("field-invalided");
-     	feedbackUsername.offsetWidth = feedbackUsername.offsetWidth;
-     	feedbackUsername.classList.add("field-invalided");
-     }
-  });
 
-    form.addEventListener("submit", function (evt) {
-     if (!feedbackUsermail.value) {
-     	evt.preventDefault();
-     	feedbackUsermail.classList.remove("field-invalided");
-     	feedbackUsermail.offsetWidth = feedbackUsermail.offsetWidth;
-     	feedbackUsermail.classList.add("field-invalided");
-     };
-  });
 
-    form.addEventListener("submit", function (evt) {
-     if (!feedbackUsermessage.value) {
-     	evt.preventDefault();
-     	feedbackUsermessage.classList.remove("field-invalided");
-     	feedbackUsermessage.offsetWidth = feedbackUsermessage.offsetWidth;
-     	feedbackUsermessage.classList.add("field-invalided");
-     }
-  });
 
-    feedbackUsername.addEventListener("focus", function (evt) {
-    	feedbackUsername.classList.remove("field-invalided");
-    });
 
-    feedbackUsermail.addEventListener("focus", function (evt) {
-    	feedbackUsermail.classList.remove("field-invalided");
-    });
 
-    feedbackUsermessage.addEventListener("focus", function (evt) {
-    	feedbackUsermessage.classList.remove("field-invalided");
-    });
 
-     form.addEventListener("submit", function (evt) {
-    	if (!feedbackUsername.value || 
-    		!feedbackUsermessage.value || 
-    		!feedbackUsermail) {
-    	evt.preventDefault();
-    	popup.classList.remove("modal-shake");
-    	popup.offsetWidth = popup.offsetWidth;
-      	popup.classList.add("modal-shake");
 
-    	} else {
-      		localStorage.setItem("feedbackUsername", feedbackUsername.value);
-      		localStorage.setItem("feedbackUsermail", feedbackUsermail.value);
-    	};
-  });
+    form.addEventListener("submit", onFormSubmit);
+    feedbackUsername.addEventListener("focus", onFieldFocus);
+    feedbackUsermail.addEventListener("focus", onFieldFocus);
+    feedbackUsermessage.addEventListener("focus", onFieldFocus);
 
- window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-shake");
-      } if (feedbackUsername.classList.contains("field-invalided")){
-      	feedbackUsername.classList.remove("field-invalided");
-      } if (feedbackUsermail.classList.contains("field-invalided")){
-      	feedbackUsermail.classList.remove("field-invalided");
-      } if (feedbackUsermessage.classList.contains("field-invalided")){
-      	feedbackUsermessage.classList.remove("field-invalided");
-      };
-    };
-  });
+    function onFormSubmit (evt) {
+      var isFormValid = true;
+
+         if (!feedbackUsername.value) {
+          isFormValid = false;
+          feedbackUsername.classList.remove("field-invalided");
+          feedbackUsername.offsetWidth = feedbackUsername.offsetWidth;
+          feedbackUsername.classList.add("field-invalided");
+         }
+
+          if (!feedbackUsermail.value) {
+          isFormValid = false;
+          feedbackUsermail.classList.remove("field-invalided");
+          feedbackUsermail.offsetWidth = feedbackUsermail.offsetWidth;
+          feedbackUsermail.classList.add("field-invalided");
+         }
+
+          if (!feedbackUsermessage.value) {
+          isFormValid = false;
+          feedbackUsermessage.classList.remove("field-invalided");
+          feedbackUsermessage.offsetWidth = feedbackUsermessage.offsetWidth;
+          feedbackUsermessage.classList.add("field-invalided");
+        }
+
+          if (!isFormValid) {
+            evt.preventDefault();
+            popup.classList.remove("modal-shake");
+            popup.offsetWidth = popup.offsetWidth;
+            popup.classList.add("modal-shake");
+            } 
+    }
+
+    function onFieldFocus (evt) {
+      evt.target.classList.remove("field-invalided");
+    }
