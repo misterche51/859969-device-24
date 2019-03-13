@@ -273,7 +273,7 @@ textarea {
 /*	letter-spacing: 0;*/
 	font-size: 15px;
 	line-height: 30px;
-	width:85px;
+	width: 85px;
 	text-align: center;
 	height: 49px;
 	-webkit-box-sizing: border-box;
@@ -340,6 +340,13 @@ textarea {
 	padding-left: 25px;
 	/*padding-left: 27px;*/
 }
+
+.user-menu__link--signout {
+	opacity: 0.3;
+	
+}
+
+
 
 .user-menu__link::before {
 	position: absolute;
@@ -1117,7 +1124,7 @@ textarea {
 }
 
 .footer__user-menu {
-	width: 360px;
+	/*width: 360px;*/
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
