@@ -89,7 +89,6 @@ textarea {
 
 
 
-
 /*для кнопки*/
 
 
@@ -575,9 +574,9 @@ textarea {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	padding-right: 60px;
-	background: -webkit-linear-gradient(top, rgb(247,226,150) 0%, rgb(247,226,150) 111px,#fff 111px,#fff 100%);
-	background: -o-linear-gradient(top, rgb(247,226,150) 0%, rgb(247,226,150) 111px,#fff 111px,#fff 100%);
-	background: linear-gradient(to bottom, rgb(247,226,150) 0%, rgb(247,226,150) 111px,#fff 111px,#fff 100%);
+	background: -webkit-linear-gradient(top, rgb(247,226,150) 0%, rgb(247,226,150) 100px,#fff 100px,#fff 100%);
+	background: -o-linear-gradient(top, rgb(247,226,150) 0%, rgb(247,226,150) 100px,#fff 100px,#fff 100%);
+	background: linear-gradient(to bottom, rgb(247,226,150) 0%, rgb(247,226,150) 100px,#fff 100px,#fff 100%);
 	position: absolute;
 	opacity: 0;
 	visibility: hidden;
@@ -594,6 +593,7 @@ textarea {
 
 .slider__item-img [alt="Квадрокоптер"] {
 	padding-top: 60px;
+	padding-left: 35px;
 }
 
 .slider__item-content {
@@ -611,12 +611,8 @@ textarea {
 .slider__item-header {
 	font-size: 47px;
 	line-height: 56px;
-	/*убрал по пиксельперф*/
-	letter-spacing: 0.5px;
-	/*letter-spacing: -1px;*/
-	/*убрал по пиксельперф*/
+	letter-spacing: 0.4px;
 	margin-bottom: 20px;
-	/*margin-bottom: 31px;*/
     position: relative;
     z-index: 1;
 }
@@ -635,11 +631,8 @@ textarea {
     position: absolute;
 	font-size: 179px;
 	color: rgb(255,255,255);
-	/*убрал по пиксперф*/
 	right: -10px;
 	top: -30px;
-	/*right: 0;
-	top: -20px;*/
     z-index: -1;
     counter-increment: slides;
     content: "0" counter(slides);
@@ -649,9 +642,7 @@ textarea {
 	font-family: OpenSansLight;
 	font-size: 15px;
 	line-height: 30px;
-	/*убрал по пиксельперф*/
 	margin-bottom: 35px;
-    /*margin-bottom: 40px;*/
 }
 
 .slider__item-btn{
@@ -693,17 +684,13 @@ textarea {
 .table__value {
 	font-size: 36px;
 	line-height: 48px;
-	/*убрал по пиксельперф*/
 	margin-bottom: 10px;
 }
 
 .slider__controls{
     position: absolute;
-    /*убрал по пиксельперф*/
     right: 85px;
     bottom: 160px;
-  /*  right: 80px;
-    bottom: 140px;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -715,6 +702,8 @@ textarea {
 	height: 12px;
   	background-image: url(../img/interface/slider-button-empty.svg);
   	background-repeat: no-repeat;
+
+  	cursor: pointer;
 }
 
 .slider__controls-item + .slider__controls-item{
@@ -742,7 +731,7 @@ textarea {
 /*Секция ассортимент*/
 
 .assortment {
-	margin-bottom: 84px;
+	margin-bottom: 80px;
 }
 
 .assortment__list {
@@ -821,7 +810,7 @@ textarea {
 
 .assortment__link:hover::before,
 .assortment__link:focus::before {
-	background-color: rgba(247,226,150,1);
+	background-color: rgb(240,197,46);
 }
 
 .assortment__link:active::after {
@@ -921,13 +910,12 @@ textarea {
 
 .banner__controls {
 	position: absolute;
-	left: 0;
-	/*убрал по пиксельперф*/
-	/*top: 10px;*/
-	width: 284px;
-	border-right: 8px solid #000;
-	padding-top: 70px;
-	padding-bottom: 40px;
+    left: 0;
+    top: 0px;
+    width: 284px;
+    border-right: 8px solid #000;
+    padding-top: 70px;
+    padding-bottom: 80px;
 }
 
 .banner__control-item {
@@ -935,9 +923,12 @@ textarea {
 	width: 160px;
 }
 
+.banner__control-item:first-child {
+	margin-top: 10px;
+}
 
 .banner__control-item + .banner__control-item {
-	margin-top: 12px;
+	margin-top: 25px;
 }
 
 
@@ -954,10 +945,23 @@ textarea {
 #banner-2:checked ~ .banner__controls [for="banner-2"]:after,
 #banner-3:checked ~ .banner__controls [for="banner-3"]:after {
 	background-color: black;
-	height: 100%;
-
+	height: 40px;
 }
 
+#banner-1:checked ~ .banner__controls [for="banner-1"] {
+	padding-left: 19px;
+	text-align: left;
+}
+
+#banner-2:checked ~ .banner__controls [for="banner-2"] {
+	padding-left: 29px;
+	text-align: left;
+}
+
+#banner-3:checked ~ .banner__controls [for="banner-3"] {
+	padding-left: 42px;
+	text-align: left;
+}
 
 
 /*Блок клиенты*/
@@ -1067,9 +1071,9 @@ textarea {
 	height: 4px;
 	border: 2px solid #e5e5e5;
 	border-radius: 50% 50%;
-
+/*
 	opacity: 0.3;
-	left: 0;
+*/	left: 0;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	        -ms-transform: translateY(-50%);
@@ -1553,6 +1557,10 @@ textarea {
 	opacity: 0.3;
 }
 
+.filter__input:disabled + .filter__label {
+	pointer-events: none;
+}
+
 .filter__input:active + .filter__label,
 .filter__input:active + .filter__label::before {
 	opacity: 1;
@@ -1992,13 +2000,13 @@ button {
 	text-transform: uppercase;
 	font-size: 18px;
 	line-height: 24px;
-	letter-spacing: 3px;
+	letter-spacing: 3.6px;
 	color: rgb(0, 0, 0);
 	text-align: center;
 
 	
-	padding-top: 14px;
-	padding-bottom: 14px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 
 	position: relative;
 	z-index: 0;
