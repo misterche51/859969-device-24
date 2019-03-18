@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
 	<meta charset="utf-8">
 	<title>Магазин гаджетов DEVICE</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 <header class="header">
   <div class="wrapper">
-	  <div class="header__container">
-		<div class="wrapper__inner">
+	<div class="wrapper__inner">
 		  <div class="logo header__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 
 		  <div class="header__top">
@@ -19,9 +19,9 @@
 				<button class="search__button-search" type="submit" aria-label="Поиск по сайту">Найти</button>
 			  </form>
 			  <ul class="header__user-menu user-menu">
-			  	<li class="user-menu__item user-menu__item--signin">
+				<li class="user-menu__item user-menu__item--signin">
 		  		<a class="user-menu__link user-menu__link--signin" href="inner.html">Владимир Петухов</a><a class="user-menu__link user-menu__link--signout" href="index.html">Выйти</a></li>
-			  	<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
+				<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
 				<li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
 			  </ul>		
 		  </div>
@@ -42,8 +42,7 @@
 				<li class="header-menu__item header-menu__item--contacts"><a class="header-menu__link" href="">Контакты</a></li>		
 			  </ul>
 		  </div>
-		</div>
-	  </div>
+	</div>
   </div>
 </header>
 <main class="page-catalog">
@@ -60,13 +59,12 @@
   <div class="catalog">
 	<div class="catalog__top">
 	  <div class="wrapper">
-	   	<div class="container">
-	   	  <div class="catalog__top-left top-left">
-		   	<span class="top-left__title">Фильтр:</span>
-		  </div>
-		  <div class="catalog__top-right">
-			<span class="top-right__title">Сортировка:</span>
-			<form class="catalog__sorting sorting">
+	   	<div class="catalog__top-left top-left">
+		  <span class="top-left__title">Фильтр:</span>
+		</div>
+		<div class="catalog__top-right">
+		  <span class="top-right__title">Сортировка:</span>
+		  <form class="catalog__sorting sorting">
 			  <fieldset class="sorting__criterion">
 
 			   	<input type="radio" name="category" class="criterion__item visually-hidden" value="price" id="sorting-price" checked>
@@ -87,25 +85,23 @@
 			   	<label for="to-top" class="direction__label"><img src="img/interface/icon-up-dir.svg" alt="По возрастанию"></label>
 			   	<label for="to-bottom" class="direction__label"><img src="img/interface/icon-down-dir.svg" alt="По убыванию"></label>  				
 			  </fieldset>	  
-			</form>
-		  </div>
-	    </div>
+		  </form>
+		</div>
 	  </div>		
 	</div>	   		
   <section class="catalog__main">
 	<h2 class="visually-hidden">Моноподы в каталоге</h2>
 	  <div class="wrapper">
-	   	<div class="container">
-	   	  <div class="catalog__showcase">
-		   	<ul class="catalog__list">
+	   	<div class="catalog__showcase">
+		  <ul class="catalog__list">
 			  <li class="catalog__item">
 				<div class="catalog__item-image">
-				  <img src="img/content/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-				</div>
-				<div class="catalog__item-image--hovered">
-				  <button type="button" class="catalog__item-cart btn">В корзину</button>
-				  <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
-				</div>					              
+				  <img src="img/content/catalog/item-1.jpg" class ="catalog__item-photo" width="360" height="380" alt="Любительская селфи-палка">
+				  <div class="catalog__item-action">
+				    <button type="button" class="catalog__item-cart btn">В корзину</button>
+				    <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  </div>	
+				</div>			              
 				<div class="catalog__item-info">
 				  <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Любительская селфи-палка</a></h3>
 				  <span class="catalog__item-price">500 руб.</span> 
@@ -113,11 +109,11 @@
 			  </li>
 			  <li class="catalog__item">
 				<div class="catalog__item-image">
-				  <img src="img/content/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-				</div>
-				<div class="catalog__item-image--hovered">
-				  <button type="button" class="catalog__item-cart btn">В корзину</button>
-				  <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  <img src="img/content/catalog/item-2.jpg" class="catalog__item-photo" width="360" height="380" alt="Профессиональная селфи-палка">
+				  <div class="catalog__item-action">
+				    <button type="button" class="catalog__item-cart btn">В корзину</button>
+				    <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  </div>
 				</div>
 				<div class="catalog__item-info">
 				  <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Профессиональная селфи-палка</a></h3>
@@ -126,41 +122,41 @@
 			  </li>
 			  <li class="catalog__item">
 				<div class="catalog__item-image">
-				  <img src="img/content/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-				</div>
-				<div class="catalog__item-image--hovered">
-				  <button type="button" class="catalog__item-cart btn">В корзину</button>
-				  <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  <img src="img/content/catalog/item-3.jpg" class="catalog__item-photo" width="360" height="380" alt="Непотопляемая селфи-палка">
+				  <div class="catalog__item-action">
+				    <button type="button" class="catalog__item-cart btn">В корзину</button>
+				    <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  </div>
 				</div>
 				<div class="catalog__item-info">
 				  <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Непотопляемая селфи-палка</a></h3>
 				  <span class="catalog__item-price">2 500 руб.</span> 
 				</div>
 			  </li>
-			  <li class="catalog__item catalog__item--new">				     
+			  <li class="catalog__item catalog__item--new">	     
 				<div class="catalog__item-image ">
-				  <img src="img/content/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-				</div>
-				<div class="catalog__item-image--hovered">
-				  <button type="button" class="catalog__item-cart btn">В корзину</button>
-				  <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  <img src="img/content/catalog/item-4.jpg" class="catalog__item-photo" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+				  <div class="catalog__item-action">
+				    <button type="button" class="catalog__item-cart btn">В корзину</button>
+				    <button type="button" class="catalog__item-campare">Добавить к сравнению</button>
+				  </div>
 				</div>
 				<div class="catalog__item-info">
 				  <h3 class="catalog__item-title"><a class="catalog__item-name" href="#">Селфи-палка «Следуй за мной»</a></h3>
 				  <span class="catalog__item-price">4 900 руб.</span> 
 				</div>
 			  </li>
-			</ul>
-			<ul class="pagination">
-			  <li class="pagination__nav pagination__nav--back"><a class="pagination__link pagination__link--nav" >Назад</a></li>
-			  <li class="pagination__nav pagination__item"><a class="pagination__link pagination__link--number pagination__link--current">1</a></li>
-			  <li class="pagination__nav pagination__item"><a class="pagination__link pagination__link--number" href="#">2</a></li>
-			  <li class="pagination__nav pagination__item"><a class="pagination__link pagination__link--number" href="#">3</a></li>	          
+		  </ul>
+		  <ul class="pagination">
+		  	  <li class="pagination__nav pagination__nav--back"><a class="pagination__link pagination__link--nav" >Назад</a></li>
+			  <li class="pagination__nav pagination__item"><a class="pagination__link pagination__link--current">1</a></li>
+			  <li class="pagination__nav pagination__item"><a class="pagination__link" href="#">2</a></li>
+			  <li class="pagination__nav pagination__item"><a class="pagination__link" href="#">3</a></li>      
 			  <li class="pagination__nav pagination__nav--forward"><a class="pagination__link pagination__link--nav" href="#">Вперед</a></li> 
-			</ul>		
-		  </div>
-		  <aside class="catalog__filter">
-			<form class="filter">
+	 	  </ul>		
+		</div>
+		<aside class="catalog__filter">
+		  <form class="filter">
 			  <fieldset class="filter__fieldset">
 			  <legend class="filter__legend" >Стоимость</legend>
 				<div class="filter__price-control range">
@@ -201,9 +197,8 @@
 				</div>
 			  </fieldset>
 			  <button type="submit" class="filter__submit btn">Показать</button>
-			</form>
-		  </aside>
-	   	</div>
+		  </form>
+		</aside>
 	  </div>
 	</section>
   </div>
@@ -254,15 +249,11 @@
 		  </li>
 		</ul>
 		<a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработан HTML Academy">
-		  <img src="img/links/logo-html.svg">
+		  <img src="img/links/logo-html.svg" alt="Логотип Академии">
 		</a>
 	  </div>
    	</div>
   </div>
 </footer>
-<script type="text/javascript">
-	
-</script>
-
 </body>
 </html>

@@ -119,9 +119,7 @@ ymaps.ready(function () {
         balloonContentFooter: 'Информация предоставлена:<br/>OOO "Девайс"',
         hintContent: 'Магазин Device находится здесь'
     });
-    // Добавим метку на карту.
     myMap.geoObjects.add(placemark);
-    // Откроем балун на метке.
     placemark.balloon.open();
 });
 

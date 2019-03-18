@@ -1,3 +1,4 @@
+<!-- Отличие от index.html в ссылуке залогиненного пользователя -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,8 +9,7 @@
 <body>
 <header class="header">
   <div class="wrapper">
-	  <div class="header__container">
-		<div class="wrapper__inner">
+	<div class="wrapper__inner">
 		  <div class="logo header__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device.svg" width="163" height="35" alt="Логотип компании Device"></a></div>
 
 		  <div class="header__top">
@@ -19,9 +19,9 @@
 				<button class="search__button-search" type="submit" aria-label="Поиск по сайту">Найти</button>
 			  </form>
 			  <ul class="header__user-menu user-menu">
-			  	<li class="user-menu__item user-menu__item--signin">
+				<li class="user-menu__item user-menu__item--signin">
 		  		<a class="user-menu__link user-menu__link--signin" href="inner.html">Владимир Петухов</a><a class="user-menu__link user-menu__link--signout" href="index.html">Выйти</a></li>
-			  	<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
+				<li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
 				<li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
 			  </ul>		
 		  </div>
@@ -42,12 +42,13 @@
 				<li class="header-menu__item header-menu__item--contacts"><a class="header-menu__link" href="">Контакты</a></li>		
 			  </ul>
 		  </div>
-		</div>
-	  </div>
+	</div>
   </div>
 </header>
 <main>
   <section class="promo">
+  	<h1 class="visually-hidden">Интернет-магазин гаджетов Device
+  	</h1>
       <h2 class="visually-hidden">Промо-слайды</h2>
     	<div class="wrapper">
       	  <div class="promo__slider slider">
@@ -57,7 +58,7 @@
         	  <div class="slider__list">
           		<div class="slider__item" id="slide-1">
            		  <div class="slider__item-img">
-              		<img src="img/content/slider/slider-1.png" alt="Черная селфи-палака длиной 8 метров"  width="384px" height="486px">
+              		<img src="img/content/slider/slider-1.png" alt="Черная селфи-палака длиной 8 метров"  width="384" height="486">
   				  </div>
               	  <div class="slider__item-content">
                 	<h3 class="slider__item-header">Делай селфи,<br>как Бен Стиллер!</h3>
@@ -82,7 +83,7 @@
             	</div>
 			    <div class="slider__item" id="slide-2">
 			      <div class="slider__item-img">
-			        <img src="img/content/slider/slider-2.png" alt="Мотивирующие фитнес-браслеты" width="345px" height="485px">
+			        <img src="img/content/slider/slider-2.png" alt="Мотивирующие фитнес-браслеты" width="345" height="485">
 			  	  </div>
 			      <div class="slider__item-content">
 			        <h3 class="slider__item-header">Худеем<br/>правильно!</h3>
@@ -98,7 +99,7 @@
 			    </div>
 				<div class="slider__item" id="slide-3">
 			      <div class="slider__item-img">
-			        <img src="img/content/slider/slider-3.png" alt="Квадрокоптер"  width="526px" height="334px">
+			        <img src="img/content/slider/slider-3.png" alt="Квадрокоптер"  width="560" height="400">
 			  	  </div>
 			      <div class="slider__item-content">
 			        <h3 class="slider__item-header">Порхает как бабочка,<br>жалит как пчела!</h3>
@@ -125,7 +126,7 @@
           </div>
         </div>
   </section>
-  <h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
+ 
   <section class="assortment">
 	  <h2 class="visually-hidden">Разделы каталога </h2>
 		<nav class="wrapper">
@@ -156,7 +157,7 @@
 		            <p class="banner__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 		            </div>
 		          <div class="banner__img">
-		            <img src="../859969-device-24/img/decorative/delivery.svg" alt="Упрощенное изображение нашего курьера">
+		            <img src="img/decorative/delivery.svg" alt="Упрощенное изображение нашего курьера">
 		          </div>
 		      </div>
 	          <div class="banner__item" id="tab-2">
@@ -165,7 +166,7 @@
 		            <p class="banner__text">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
 		            </div>
 		          <div class="banner__img">
-		            <img src="../859969-device-24/img/decorative/warranty.svg" alt="Инвентарь для ремонта">
+		            <img src="img/decorative/warranty.svg" alt="Инвентарь для ремонта">
 		          </div>	
 		      </div>
 		      <div class="banner__item" id="tab-3">
@@ -174,7 +175,7 @@
 		            <p class="banner__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 		            </div>
 		          <div class="banner__img">
-		            <img src="../859969-device-24/img/decorative/credit.svg" alt="Кредит осилит просящий">
+		            <img src="img/decorative/credit.svg" alt="Кредит осилит просящий">
 		          </div>	
 		      </div>
 			</div>
@@ -194,22 +195,22 @@
 		<nav class="wrapper">
 		  <ul class="clients__list">
 			<li class="clients__item">
-			  <a class="clients__link"  href="https://www.dji.com/ru">
+			  <a class="clients__link" href="https://www.dji.com/ru" target="_blank">
 				<img src="img/clients/dji_logo.png" width="260" height="100" alt="Компания DJI">
 			  </a>
 			</li>
 			<li class="clients__item">
-			  <a class="clients__link" href="www.sp-gadgets.com/">
+			  <a class="clients__link"  href="www.sp-gadgets.com/" target="_blank">
 				<img src="img/clients/spg_logo.png" width="260" height="100" alt="Компания SP Gadgets">
 			  </a>
 			</li>
 			<li class="clients__item">
-			  <a class="clients__link" href="https://gopro.com/">
+			  <a class="clients__link" href="https://gopro.com/" target="_blank">
 				<img src="img/clients/gopro_logo.png" width="260" height="100" alt="Компания GoPro">
 			  </a>
 			</li>
 			<li class="clients__item">
-			  <a class="clients__link" href="https://www.vive.com/ru/">
+			  <a class="clients__link" href="https://www.vive.com/ru/" target="_blank">
 				<img src="img/clients/vive_logo.png" width="260" height="100" alt="Компания Vive">
 			  </a>
 			</li>
@@ -223,8 +224,8 @@
 		  <div class="about__info">
 			<section class="about__column">
 			  <h3 class="about__title">О нас</h3>
-				<p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика,</br> который есть в каждом из нас.</p>
-				<p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки</br> России! DEVICE работает со многими транспортными компаниями:</p>
+				<p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+				<p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
 				<ul class="about__delivery delivery">
 				  <li class="delivery__item"><a class="delivery__link"  href="https://www.dellin.ru/">Деловые линии</a></li>
 				  <li class="delivery__item"><a class="delivery__link" href="ae5000.ru/">Автотрединг</a></li>
@@ -250,7 +251,7 @@
 		<div class="logo footer__logo"><a class="logo__link" href="index.html"><img src="img/decorative/logo-device-footer.svg" width="163" height="35" alt="Логотип компании Device"></a>
 		</div>
 		<ul class="footer__user-menu user-menu">
-		  <li class="user-menu__item user-menu__item--signin"><a class="user-menu__link user-menu__link--signin" href="inner.html">Владимир Петухов</a><a class="user-menu__link user-menu__link--signout" href="index.html">Выйти</a></li>
+		  <li class="user-menu__item user-menu__item--signin"><a class="user-menu__link user-menu__link--signin" href="inner.html">Войти</a></li>
 		  <li class="user-menu__item user-menu__item--compare"><a class="user-menu__link user-menu__link--compare" href="">Сравнить</a></li>
 		  <li class="user-menu__item user-menu__item--cart"><a class="user-menu__link user-menu__link--cart" href="">Корзина</a></li>
 		</ul>
@@ -259,7 +260,7 @@
 		<address class="footer__address">г.Москва, ул. Строителей 15</address>
 		<ul class="footer-menu">
 		  <li class="footer-menu__item">
-		    <a class="footer-menu__link" href="#">Доставка</a>
+			<a class="footer-menu__link" href="#">Доставка</a>
 	      </li>
 		  <li class="footer-menu__item">
 			<a class="footer-menu__link" href="#">Гарантия</a>
@@ -289,7 +290,7 @@
 		  </li>
 		</ul>
 		<a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработан HTML Academy">
-		  <img src="img/links/logo-html.svg">
+		  <img src="img/links/logo-html.svg" alt="Логотип Академии">
 		</a>
 	  </div>
    	</div>
@@ -301,7 +302,6 @@
 		<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
 		  <fieldset class="form__userinfo">
 			<div class="userinfo__wrapper">
-			  <legend class="visually-hidden">Данные о пользователе</legend>
 			  <div class="form__userinfo-item">
 				<label for="username" class="form__field-title">Ваше имя:</label>
 				  <input type="text" name="username" id="username" class="form__field form__field--username" placeholder="Имя Фамилия" tabindex="0">						
@@ -326,7 +326,7 @@
 	</section>
 
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=e65a5941-ff7f-4ba8-8c4b-619608518509&lang=ru_RU" type="text/javascript">
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e65a5941-ff7f-4ba8-8c4b-619608518509&lang=ru_RU">
 </script>
 
 <script src="js/device.js"></script>

@@ -22,7 +22,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #ffffff;
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 }
 
 .visually-hidden {
@@ -75,37 +75,6 @@ textarea {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*для кнопки*/
-
-
-
-
-
-
-
-.modal label {
-	font-size: 18px;
-	line-height: 24px;
-}
-
-
-
-
-
 /*разметка сетки*/
 
 
@@ -125,7 +94,8 @@ textarea {
 	padding-right: 60px;
 }
 
-.header__container {
+
+.header .wrapper__inner {
 	background-color: rgb(247,226,150);
 	margin-top: 40px;
 
@@ -137,14 +107,8 @@ textarea {
 	-webkit-transform: translateY(-50%);
 	        -ms-transform: translateY(-50%);
 	    transform: translateY(-50%);
-
-
-	/*убрал по пиксельперф*/
-	/*margin-bottom: 18px*/
 }
 
-/*одинаковое поведение в хедере и футере, 
-не стал задавать отдельно стили для эффектов на лого*/
 .logo__link:hover,
 .logo__link:focus {
 	opacity: 0.6;
@@ -157,10 +121,7 @@ textarea {
 
 
 .header__top {
-
-	/*убрал по пиксельперф*/
 	margin-bottom: 30px;
-	/*margin-bottom: 50px;*/
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -201,7 +162,6 @@ textarea {
 
 .search__field {
 	width: 360px;
-	/*width: 100%;*/
 	padding-left: 40px; 
 	border: none;
 	border-bottom: 2px solid transparent;
@@ -209,7 +169,7 @@ textarea {
 	background-color: transparent;
 	height: 50px;
 
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	color: #000;
@@ -220,25 +180,25 @@ textarea {
 }
 
 .search__field::-webkit-input-placeholder {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	color: rgba(0,0,0,0.3);
 }
 
 .search__field:-ms-input-placeholder {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	color: rgba(0,0,0,0.3);
 }
 
 .search__field::-ms-input-placeholder {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	color: rgba(0,0,0,0.3);
 }
 
 .search__field::placeholder {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	color: rgba(0,0,0,0.3);
 }
@@ -268,8 +228,7 @@ textarea {
 }
 
 .search__button-search {
-	font-family: OpenSansLight;
-/*	letter-spacing: 0;*/
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	width: 85px;
@@ -278,8 +237,6 @@ textarea {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 
-	/*padding-left: 17px;
-	padding-right: 17px;*/
 
 	border: 2px solid #000;
 	margin-left: auto;
@@ -300,7 +257,6 @@ textarea {
 }
 
 
-
 /*юзер меню*/
 
 .header__user-menu {
@@ -309,15 +265,9 @@ textarea {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-
 	-webkit-box-pack: start;
-
 	    -ms-flex-pack: start;
-
 	        justify-content: flex-start;
-	/*-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;*/
 }
 
 .user-menu__item + .user-menu__item {
@@ -329,23 +279,18 @@ textarea {
 }
 
 .user-menu__link {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	position: relative;
 
-	/*уюрал по пиксперф*/
-
 	padding-left: 25px;
-	/*padding-left: 27px;*/
 }
 
 .user-menu__link--signout {
 	opacity: 0.3;
 	
 }
-
-
 
 .user-menu__link::before {
 	position: absolute;
@@ -404,13 +349,8 @@ textarea {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: start;
-
 	    -ms-flex-pack: start;
-
 	        justify-content: flex-start;
-	/*-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;*/
 	position: relative;
 
 }
@@ -440,7 +380,7 @@ textarea {
 }
 
 .header-menu__link {
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 	color: #000000;
 	font-size: 18px;
 	line-height: 24px;
@@ -526,7 +466,7 @@ textarea {
 
 .dropdown__link  {
 	text-transform: none;
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 36px;
 	color: #000000;
@@ -639,7 +579,7 @@ textarea {
 }
 
 .slider__item-text {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	margin-bottom: 35px;
@@ -651,7 +591,7 @@ textarea {
 }
 
 .slider__item-table {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	letter-spacing: 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -726,8 +666,6 @@ textarea {
 
 
 
-
-
 /*Секция ассортимент*/
 
 .assortment {
@@ -750,7 +688,7 @@ textarea {
 
 .assortment__link {
 	display: block;
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0.15px;
@@ -864,9 +802,6 @@ textarea {
  	transition: all ease-in-out 0.5s;
 }
 
-
-
-
 .banner__title {
 	font-size: 47px;
 	line-height: 48px;
@@ -876,7 +811,7 @@ textarea {
 }
 
 .banner__text {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	letter-spacing: 0.3px;
@@ -916,6 +851,22 @@ textarea {
     border-right: 8px solid #000;
     padding-top: 70px;
     padding-bottom: 80px;
+
+
+    display: -webkit-box;
+
+
+    display: -ms-flexbox;
+
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .banner__control-item {
@@ -931,14 +882,11 @@ textarea {
 	margin-top: 25px;
 }
 
-
-
 #banner-1:checked ~ .banner__controls [for="banner-1"],
 #banner-2:checked ~ .banner__controls [for="banner-2"],
 #banner-3:checked ~ .banner__controls [for="banner-3"] {
 	color: #f7e184;
 	width: 100%;
-
 }
 
 #banner-1:checked ~ .banner__controls [for="banner-1"]:after,
@@ -965,11 +913,13 @@ textarea {
 
 
 /*Блок клиенты*/
+.clients {
+	margin-bottom: 90px;
+}
+
 .clients__list {
 	height: 100px;
-	/*убрал по пиксельперф*/
-	margin-bottom: 85px;
-	/*margin-bottom: 93px;*/
+	
 
 	display: -webkit-box;
 
@@ -995,7 +945,6 @@ textarea {
 }
 
 
-
 /*блок о компании*/
 
 .about {
@@ -1006,24 +955,17 @@ textarea {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-/*	убрал по пиксельперф*/
-	/*margin: 0 20px;*/
-	/*убрал по пиксельперф*/
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
 
 .about__title {
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 	font-size: 47px;
 	line-height: 48px;
 	color: rgb(0,0,0);
-
-	/*убрал по пиксельперф*/
 	margin-bottom: 45px;
-
-	/*margin-bottom: 50px;*/
 }
 
 .about__title::before {
@@ -1037,7 +979,7 @@ textarea {
 }
 
 .about__text {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	color: #464646;
@@ -1045,14 +987,21 @@ textarea {
 	margin-bottom: 35px;
 }
 
+
 .about__column {
 	width: 560px;
 	min-height: 575px;
-	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 .about__delivery {
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 .delivery__link {
@@ -1071,9 +1020,7 @@ textarea {
 	height: 4px;
 	border: 2px solid #e5e5e5;
 	border-radius: 50% 50%;
-/*
-	opacity: 0.3;
-*/	left: 0;
+	left: 0;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	        -ms-transform: translateY(-50%);
@@ -1090,11 +1037,8 @@ textarea {
 }
 
 .about__btn {
-	/*вынужден использовать !important для того, чтобы спозиционировать кнопку, для которой прописаны общие стили,
-	в самом низу блока только для данного раздела, в других разделах она должна оставаться в потоке*/
-	position: absolute !important;
-	bottom: 0;
 	width: 260px;
+	margin-top: auto;
 }
 
 /*Блок футер*/
@@ -1103,9 +1047,7 @@ textarea {
 }
 
 .footer__container {
-/*	убрал по пиксельперф*/
 	padding: 65px 0px;
-	/*padding: 65px 20px;*/
 }
 
 
@@ -1117,10 +1059,7 @@ textarea {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-
-/*	убрал по пиксельперф*/
 	margin-bottom: 35px;
-	/*margin-bottom: 40px;*/
 }
 
 .footer__logo {
@@ -1128,7 +1067,6 @@ textarea {
 }
 
 .footer__user-menu {
-	/*width: 360px;*/
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1136,7 +1074,6 @@ textarea {
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
 }
-
 
 .footer__user-menu .user-menu__link {
 	color: rgba(255, 255, 255, 0.7);
@@ -1172,7 +1109,6 @@ textarea {
 }
 
 
-
 /*средний подблок футера с меню*/
 .footer__middle {
 	display: -webkit-box;
@@ -1184,28 +1120,20 @@ textarea {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-/*	убрал по пиксельперф*/
 	margin-bottom: 65px;
-	/*margin-bottom: 70px;*/
 }
 
 .footer__address {
 	font-style: normal;
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	color: #ffffff;
-
 	width: 210px;
 }
 
 .footer-menu {
-/*	убрал по пиксельперф*/
 	width: 420px;
-	/*width: 440px;*/
-
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
@@ -1214,7 +1142,7 @@ textarea {
 
 .footer-menu__link {
 	color: #ffffff;
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	text-transform: uppercase;
@@ -1232,7 +1160,7 @@ textarea {
 
 .footer__tel {
 	font-style: normal;
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	color: #ffffff;
 
 	width: 210px;
@@ -1269,7 +1197,6 @@ textarea {
 	    justify-content: space-around;
 }
 
-
 .footer__copyright {
 	width: 80px;
 	text-align: right;
@@ -1288,7 +1215,6 @@ textarea {
 	opacity: 0.6;
 }
 
-
 .footer__copyright:hover,
 .footer__copyright:focus {
 	opacity: 0.6;
@@ -1300,18 +1226,11 @@ textarea {
 
 
 
-
-
-
 /*для страницы моноподс*/
 
 .page-title {
-	/*убрал по пиксперф*/
 	margin-top: 30px;
-	/*margin-top: 44px;*/
 	margin-bottom: 25px;
-	/*margin-bottom: 44px;*/
-	/*добавил*/
 	letter-spacing: 0.5px;
 
 }
@@ -1319,21 +1238,15 @@ textarea {
 /*Хлебные крошки*/
 
 .breadcrumbs {
-	/*убрал по пиксперф*/
 	margin-bottom: 45px;
-	/*margin-bottom: 50px;*/
 }
 
 /*разметка декоративные элементы для хлебных крошек*/
 
 .breadcrumbs__item {
 	display: inline-block;
-	/*убрал по пиксперф*/
 	padding-right: 30px;
-	/*padding-right: 18px;*/
 	position: relative;
-
-	/*добавил*/
 	padding-left: 10px;
 }
 
@@ -1346,9 +1259,7 @@ textarea {
 	content: "";
 	width: 4px;
 	height: 7px;
-	/*убрал по пиксперф*/
 	right: 5px;
-	/*right: 8px;*/
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	        -ms-transform: translateY(-50%);
@@ -1361,7 +1272,7 @@ textarea {
 
 .breadcrumbs__link,
 .breadcrumbs__current {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 
@@ -1381,9 +1292,7 @@ textarea {
 /*Блок каталога*/
 
 .container {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	
 }
 
 .catalog__top {
@@ -1393,6 +1302,13 @@ textarea {
 	background: -o-linear-gradient(left, #d9d9d9 0%,#d9d9d9 50%,#ebebeb 50%,#ebebeb 100%);
 	background: linear-gradient(to right, #d9d9d9 0%,#d9d9d9 50%,#ebebeb 50%,#ebebeb 100%);
 }
+
+.catalog__top .wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
 
 .catalog__top-left {
 	-webkit-box-sizing: border-box;
@@ -1453,7 +1369,6 @@ textarea {
 	width: 320px;
 }
 
-
 .criterion__name {
 	margin-right: 32px;
 }
@@ -1461,7 +1376,6 @@ textarea {
 .criterion__name:last-child {
 	margin-right: 0;
 }
-
 
 .sorting__direction {
 	margin-left: auto;
@@ -1489,7 +1403,7 @@ textarea {
 }
 
 .criterion__name {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 18px; 
 	opacity: 0.3;
@@ -1505,20 +1419,15 @@ textarea {
 	opacity: 1;
 }
 
-
 .filter__color-list,
 .filter__bluetooth-list {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 40px;
 }
 
 
-
-
-
 /*описываю чекбоксы*/
-
 
 .filter__fieldset {
 	margin-bottom: 35px;
@@ -1566,13 +1475,10 @@ textarea {
 	opacity: 1;
 }
 
-
 .filter__input--checkbox:checked + .checkbox__label::before,
 .filter__input--checkbox:active + .checkbox__label::before  {
 	background-image: url(../img/interface/checkbox-on.svg);
 }
-
-
 
 .radio__label {
 	position: relative;
@@ -1601,11 +1507,10 @@ textarea {
 }
 
 
-
 /*ползунки стоимости*/
 .range__price {
 	display: inline-block;
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 	color: rgba(0, 0, 0, 0.2);
@@ -1614,7 +1519,7 @@ textarea {
 }
 
 .price__value {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 	color: rgba(0, 0, 0, 0.2);
@@ -1627,11 +1532,8 @@ textarea {
 
 .range__scale {
 	position: relative;
-
   	height: 2px;
-
   	background-color: rgb(219,219,219);
-
   	margin-bottom: 10px;
 }
 
@@ -1680,6 +1582,12 @@ textarea {
 	background: linear-gradient(to right, #eee 0%,#eee 50%,#fff 50%,#fff 100%);
 }
 
+.catalog__main .wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
 .catalog__filter {
 	padding: 70px;
 	padding-left: 60px;
@@ -1692,40 +1600,22 @@ textarea {
 
 .filter__legend {
 	display: block;
-	/*по пиксперф*/
 	padding-top: 10px;
-	/*padding-top: 20px;*/
 	border-top: 2px solid #000000;
 	width: 200px;
-	/*Добавляю по пиесперф*/
 	margin-bottom: 25px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
+/*блок с товарами*/
 .catalog__showcase {
 	background-color: #fff;
 	width: 830px;
 	-webkit-box-ordinal-group: 2;
 	    -ms-flex-order: 1;
 	        order: 1;
-
-
 	display: -webkit-box;
-
-
 	display: -ms-flexbox;
-
-
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -1740,14 +1630,9 @@ textarea {
 	margin-left: auto;
 	width: 760px;
 	margin-bottom: 40px;
-
-	/*добавляю*/
 	padding-top: 70px;
-
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
@@ -1761,18 +1646,13 @@ textarea {
 .catalog__item {
 	width: 360px;
 	height: 460px;
-	/*удаляю*/
-	/*margin-top: 70px;*/
-	/*добавляю*/
 	margin-bottom: 50px;
 	position: relative;
 }
 
 
 .catalog__item-image {
-	/*изменяю по пиксперф*/
 	margin-bottom: 30px;
-	/*margin-bottom: 40px;*/
 	width: 360px;
 	height: 380px;
 }
@@ -1789,7 +1669,7 @@ textarea {
 	border-radius: 50%;
 	background-color: transparent;
 
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 	color: rgb(190,190,190);
 	font-size: 14px;
 	line-height: 24px;
@@ -1799,15 +1679,14 @@ textarea {
 	padding-bottom: 20px;
 }
 
-
-.catalog__item-image--hovered {
+.catalog__item-action {
 	display: none;
 
 	position: absolute;
-	top: 0;
+	top: -20px;
 	left: 0;
-	width: 360px;
-	height: 380px;
+	width: 100%;
+	height: 100%;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
@@ -1817,25 +1696,12 @@ textarea {
 	    align-content: center;
 }
 
-/*.catalog__item-image--hovered::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 360px;
-	height: 380px;
-	background-color: red;
-}
-*/
-
-
 .catalog__item-campare {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 36px;
 	width: 100%;
 	opacity: 0.5;
-
-
 	outline: none;
 }
 
@@ -1855,13 +1721,13 @@ textarea {
 	    transform: translateX(-50%);
 }
 
-.catalog__item:hover .catalog__item-image--hovered {
+.catalog__item:hover .catalog__item-action {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
 
-.catalog__item:hover .catalog__item-image {
+.catalog__item:hover .catalog__item-photo {
 	opacity: 0.7;
 }
 
@@ -1888,7 +1754,7 @@ textarea {
 }
 
 .catalog__item-price {
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 }
@@ -1903,12 +1769,9 @@ textarea {
 	height: 70px;
 	background-color: rgb(235, 235, 235);
 
-
 	display: -webkit-box;
 
-
 	display: -ms-flexbox;
-
 
 	display: flex;
 	-webkit-box-pack: justify;
@@ -1942,7 +1805,8 @@ textarea {
 	display: block;
 	text-align: center;
 }
-.pagination__link--number {
+
+.pagination__link {
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -1954,7 +1818,7 @@ textarea {
 
 .pagination__link--nav:hover,
 .pagination__link--nav:focus {
-	background-color: #d9d9d9
+	background-color: #d9d9d9;
 }
 
 .pagination__link--nav:active {
@@ -1962,21 +1826,15 @@ textarea {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination__link--number:hover,
-.pagination__link--number:focus {
+.pagination__link:hover,
+.pagination__link:focus {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.pagination__link--number:active,
+.pagination__link:active,
 .pagination__link--current {
 	color: #000;
 }
-
-
-
-
-
-
 
 
 
@@ -1994,19 +1852,20 @@ button {
 }
 
 .btn {
-	display: block;
-
-	font-family: GilroyExtraBold;
+	font-family: GilroyExtraBold, Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 18px;
 	line-height: 24px;
-	letter-spacing: 3.6px;
+	letter-spacing: 3px;
 	color: rgb(0, 0, 0);
 	text-align: center;
 
 	
 	padding-top: 8px;
 	padding-bottom: 8px;
+	padding-left: 25px;
+	padding-right: 25px;
+
 
 	position: relative;
 	z-index: 0;
@@ -2049,7 +1908,7 @@ button {
 
 
 
-
+/*блок с модалками*/
 .modal {
 	z-index: 5;
 	-webkit-box-shadow: 0 0 30px rgba(0,0,0,0.5);
@@ -2133,7 +1992,10 @@ button {
 	margin-bottom: 35px;
 }
 
-
+.modal label {
+	font-size: 18px;
+	line-height: 24px;
+}
 
 .form__field-title {
 	display: block;
@@ -2147,7 +2009,7 @@ button {
 	height: 50px;
 	background-color: rgba(4, 6, 6, 0.2);
 	color: rgba(70, 70, 70, 0.4);
-	font-family: OpenSansLight;
+	font-family: OpenSansLight, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	padding-left: 20px;
@@ -2376,4 +2238,4 @@ button {
     -webkit-transform: translateX(5px);
             transform: translateX(5px);
   }
-}}
+}
