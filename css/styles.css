@@ -689,10 +689,6 @@ a {
 .assortment__link--vr::after {
 	background-image: url(../img/main-catalog/popular-1.svg);
 }
-/*
-.assortment__link--monopods {
-	width: 93px;
-}*/
 
 .assortment__link--monopods::after {
 	margin-top: -5px;
@@ -796,8 +792,6 @@ a {
 	margin-top: 0px;
 	margin-right: 70px;
 }
-
-
 
 .banner {
 	display: -webkit-box;
@@ -1777,6 +1771,7 @@ a {
 .catalog__item-title {
 	margin: 0;
 	width: 260px;
+	
 }
 
 .catalog__item-name {
@@ -1784,8 +1779,6 @@ a {
 	line-height: 24px;
 	letter-spacing: 0.3px;
 	color: #000000;
-	word-wrap: break-word;
-	white-space: pre-wrap;
 }
 
 .catalog__item-price {
