@@ -689,10 +689,10 @@ a {
 .assortment__link--vr::after {
 	background-image: url(../img/main-catalog/popular-1.svg);
 }
-
+/*
 .assortment__link--monopods {
 	width: 93px;
-}
+}*/
 
 .assortment__link--monopods::after {
 	margin-top: -5px;
